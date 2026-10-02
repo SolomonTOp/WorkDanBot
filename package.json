@@ -1,0 +1,15 @@
+{
+  "name": "travel-customer-service-bot",
+  "version": "1.0.0",
+  "description": "Telegram customer service & sales handoff bot for Tour & Travel, deployed on Vercel",
+  "main": "api/bot.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/localDev.js",
+    "dev": "node --watch src/localDev.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "grammy": "^1.35.0"
+  }
+}
