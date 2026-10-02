@@ -50,19 +50,11 @@ export function createBot(token) {
 
     const keyboard = new InlineKeyboard();
 
-    // 2-column layout for the 14 service areas
-    for (let i = 0; i < SERVICES_CATALOG.length; i += 2) {
-      const cat1 = SERVICES_CATALOG[i];
-      const cat1Data = cat1[lang] || cat1.en;
-      keyboard.text(cat1Data.btnTitle, `svc_${cat1.id}:${lang}`);
-
-      if (i + 1 < SERVICES_CATALOG.length) {
-        const cat2 = SERVICES_CATALOG[i + 1];
-        const cat2Data = cat2[lang] || cat2.en;
-        keyboard.text(cat2Data.btnTitle, `svc_${cat2.id}:${lang}`);
-      }
-      keyboard.row();
-    }
+    // Single-column numbered list matching the original service catalog order
+    SERVICES_CATALOG.forEach((cat, idx) => {
+      const catData = cat[lang] || cat.en;
+      keyboard.text(`${idx + 1}. ${catData.btnTitle}`, `svc_${cat.id}:${lang}`).row();
+    });
 
     // FAQs & Language Switch
     keyboard
