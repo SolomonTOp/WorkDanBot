@@ -1,5 +1,7 @@
 // Bilingual Data Catalog (English & Amharic) for Work Dan Tour & Travel / Workdane Trading LLC
 
+export { SERVICES_CATALOG } from "./servicesCatalog.js";
+
 export const COMPANY_INFO = {
   website: "https://www.workdane.com",
   email: "workdanuae@gmail.com",

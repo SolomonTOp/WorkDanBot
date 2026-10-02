@@ -5,7 +5,8 @@ import {
   TOUR_PACKAGES,
   TRAVEL_SERVICES,
   BUSINESS_SERVICES,
-  FAQS
+  FAQS,
+  SERVICES_CATALOG
 } from "./toursData.js";
 
 export function createBot(token) {
@@ -47,16 +48,25 @@ export function createBot(token) {
       ? "ሰላም ወርቅ ዳን! ስለ አገልግሎታችሁ መረጃ ማግኘት እፈልጋለሁ።"
       : "Hello Work Dan! I would like to inquire about your travel services.";
 
-    const keyboard = new InlineKeyboard()
-      .text(t.btnTours, `menu_tours:${lang}`)
-      .row()
-      .text(t.btnTravel, `menu_travel:${lang}`)
-      .row()
-      .text(t.btnBusiness, `menu_business:${lang}`)
-      .row()
-      .text(t.btnContacts, `menu_contacts:${lang}`)
+    const keyboard = new InlineKeyboard();
+
+    // 2-column layout for the 14 service areas
+    for (let i = 0; i < SERVICES_CATALOG.length; i += 2) {
+      const cat1 = SERVICES_CATALOG[i];
+      const cat1Data = cat1[lang] || cat1.en;
+      keyboard.text(cat1Data.btnTitle, `svc_${cat1.id}:${lang}`);
+
+      if (i + 1 < SERVICES_CATALOG.length) {
+        const cat2 = SERVICES_CATALOG[i + 1];
+        const cat2Data = cat2[lang] || cat2.en;
+        keyboard.text(cat2Data.btnTitle, `svc_${cat2.id}:${lang}`);
+      }
+      keyboard.row();
+    }
+
+    // FAQs & Language Switch
+    keyboard
       .text(t.btnFaqs, `menu_faqs:${lang}`)
-      .row()
       .text(t.btnChangeLang, "choose_lang");
 
     // Add buttons for both sales representatives
@@ -136,7 +146,59 @@ export function createBot(token) {
     });
   });
 
-  // 6. Callback: Tour Packages Menu
+  // 6. Callback: Service Area Detail Handler
+  bot.callbackQuery(/^svc_([a-z0-9_]+):(en|am)$/, async (ctx) => {
+    await ctx.answerCallbackQuery();
+    const serviceId = ctx.match[1];
+    const lang = ctx.match[2];
+    const t = I18N[lang] || I18N.en;
+
+    const cat = SERVICES_CATALOG.find((item) => item.id === serviceId);
+    if (!cat) {
+      await ctx.editMessageText("Service not found / አገልግሎቱ አልተገኘም", {
+        reply_markup: getMainMenuKeyboard(lang)
+      });
+      return;
+    }
+
+    const catData = cat[lang] || cat.en;
+    let messageText = `*${catData.title}*\n`;
+    messageText += `_${catData.tagline}_\n\n`;
+
+    catData.sections.forEach((sec) => {
+      messageText += `*${sec.name}*\n`;
+      sec.items.forEach((item) => {
+        messageText += `• ${item}\n`;
+      });
+      messageText += `\n`;
+    });
+
+    const callToAction = lang === "am"
+      ? "ለቦታ ማስያዣ ወይም ፈጣን መረጃ ለማግኘት ከታች ካሉት የሽያጭ ክፍሎች አንዱን ያነጋግሩ፡"
+      : "For bookings, quotations, or fast assistance, chat with our sales team below:";
+
+    messageText += `_${callToAction}_`;
+
+    const keyboard = new InlineKeyboard();
+
+    // If viewing tour packages, offer button to explore detailed package itineraries
+    if (serviceId === "tour_packages") {
+      const tourPackagesBtn = lang === "am"
+        ? "🌟 ዝርዝር የዱባይ ጉብኝት ፓኬጆች (Itineraries & Rates)"
+        : "🌟 View Detailed Dubai Tour Itineraries & Rates";
+      keyboard.text(tourPackagesBtn, `menu_tours:${lang}`).row();
+    }
+
+    addSalesButtons(keyboard, catData.inquiry, lang);
+    keyboard.row().text(t.btnBackMenu, `main_menu:${lang}`);
+
+    await ctx.editMessageText(messageText, {
+      parse_mode: "Markdown",
+      reply_markup: keyboard
+    });
+  });
+
+  // 7. Callback: Tour Packages Menu
   bot.callbackQuery(/^menu_tours:(en|am)$/, async (ctx) => {
     await ctx.answerCallbackQuery();
     const lang = ctx.match[1];
