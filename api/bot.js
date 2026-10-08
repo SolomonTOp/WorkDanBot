@@ -27,6 +27,17 @@ export default async function handler(req, res) {
       console.error("BOT_TOKEN is missing in environment variables.");
       return res.status(500).json({ error: "BOT_TOKEN not configured" });
     }
+
+    // Security Verification: Ensure the request comes from Telegram
+    const secretToken = process.env.WEBHOOK_SECRET;
+    if (secretToken) {
+      const headerToken = req.headers["x-telegram-bot-api-secret-token"];
+      if (headerToken !== secretToken) {
+        console.warn("Unauthorized request attempt rejected.");
+        return res.status(401).send("Unauthorized");
+      }
+    }
+
     try {
       return await handleUpdate(req, res);
     } catch (err) {

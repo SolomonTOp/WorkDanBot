@@ -1,1021 +1,1289 @@
-// Comprehensive Bilingual Services Catalog for Work Dan Tour & Travel / Workdane Trading LLC
+// Services Catalog — Work Dan Tour & Travel / Workdane Trading LLC
+//
+// Section fields:
+//   name            : section label
+//   requirements    : string[] — documents needed
+//   regulations     : string[] — rules, success rates, deposits
+//   terminalSection : true — skips item list; sales buttons shown directly
+//   inquiry         : string — pre-filled Telegram message
+//   items           : string[] | { label, requirements?, regulations?, ageOptions? }[]
+//   ageOptions      : { label, requirements, regulations }[] on items — adds age selection step
 
 export const SERVICES_CATALOG = [
+
+  // ── 1. UAE Visa Services ──────────────────────────────────────────────────
   {
     id: "uae_visa",
     icon: "🇦🇪",
     en: {
-      btnTitle: "🇦🇪 UAE Visa",
+      btnTitle: "🇦🇪 UAE Visa Services",
       title: "🇦🇪 UAE VISA SERVICES",
-      tagline: "Fast-track Tourist Visas, Visa Change (A2A & Inside-Country), Extensions and Fine Checks.",
+      tagline: "Dubai & Sharjah visit visas, Visa Change (A2A), Extension and Cancellation.",
       sections: [
         {
-          name: "Visit Visa",
+          name: "Dubai Visit Visa",
           items: [
-            "Dubai Visa (30 Days & 60 Days)",
-            "Sharjah Visa",
-            "Abu Dhabi Visa",
-            "Ras Al Khaimah Visa"
+            {
+              label: "96 Hours",
+              requirements: ["Passport (front & back page)", "Passport-size photo"],
+              regulations: ["💰 Guarantee deposit: 300,000 ETB"]
+            },
+            {
+              label: "30 Days — Single  |  24,500 ETB",
+              ageOptions: [
+                {
+                  label: "Under 41",
+                  requirements: [
+                    "6-month bank statement (ending balance $4,000 USD per 4-month block)",
+                    "Passport-size photo",
+                    "Passport (front & back page)"
+                  ],
+                  regulations: [
+                    "📊 Success rate: ~50%",
+                    "❌ Non-refundable if rejected",
+                    "💰 Guarantee deposit: 180,000 ETB",
+                    "↩ Deposit refundable within 24 hrs on timely return / status change — otherwise forfeited"
+                  ]
+                },
+                {
+                  label: "Above 40",
+                  requirements: [
+                    "Passport-size photo",
+                    "Passport (front & back page)"
+                  ],
+                  regulations: [
+                    "📊 Success rate: 90%+",
+                    "❌ Non-refundable if rejected",
+                    "💰 Guarantee deposit: 180,000 ETB",
+                    "↩ Deposit refundable within 24 hrs on timely return / status change — otherwise forfeited"
+                  ]
+                }
+              ]
+            },
+            {
+              label: "30 Days — Multiple  |  43,500 ETB",
+              ageOptions: [
+                {
+                  label: "Under 41",
+                  requirements: [
+                    "6-month bank statement (ending balance $4,000 USD per 4-month block)",
+                    "Passport-size photo",
+                    "Passport (front & back page)"
+                  ],
+                  regulations: [
+                    "📊 Success rate: ~50%",
+                    "❌ Non-refundable if rejected",
+                    "💰 Guarantee deposit: 180,000 ETB",
+                    "↩ Deposit refundable within 24 hrs on timely return / status change — otherwise forfeited"
+                  ]
+                },
+                {
+                  label: "Above 40",
+                  requirements: [
+                    "Passport-size photo",
+                    "Passport (front & back page)"
+                  ],
+                  regulations: [
+                    "📊 Success rate: 90%+",
+                    "❌ Non-refundable if rejected",
+                    "💰 Guarantee deposit: 180,000 ETB",
+                    "↩ Deposit refundable within 24 hrs on timely return / status change — otherwise forfeited"
+                  ]
+                }
+              ]
+            },
+            {
+              label: "60 Days — Single  |  49,500 ETB",
+              ageOptions: [
+                {
+                  label: "Under 41",
+                  requirements: [
+                    "6-month bank statement (ending balance $4,000 USD per 4-month block)",
+                    "Passport-size photo",
+                    "Passport (front & back page)"
+                  ],
+                  regulations: [
+                    "📊 Success rate: ~50%",
+                    "❌ Non-refundable if rejected",
+                    "💰 Guarantee deposit: 180,000 ETB",
+                    "↩ Deposit refundable within 24 hrs on timely return / status change — otherwise forfeited"
+                  ]
+                },
+                {
+                  label: "Above 40",
+                  requirements: [
+                    "Passport-size photo",
+                    "Passport (front & back page)"
+                  ],
+                  regulations: [
+                    "📊 Success rate: 90%+",
+                    "❌ Non-refundable if rejected",
+                    "💰 Guarantee deposit: 180,000 ETB",
+                    "↩ Deposit refundable within 24 hrs on timely return / status change — otherwise forfeited"
+                  ]
+                }
+              ]
+            },
+            {
+              label: "60 Days — Multiple  |  74,500 ETB",
+              ageOptions: [
+                {
+                  label: "Under 41",
+                  requirements: [
+                    "6-month bank statement (ending balance $4,000 USD per 4-month block)",
+                    "Passport-size photo",
+                    "Passport (front & back page)"
+                  ],
+                  regulations: [
+                    "📊 Success rate: ~50%",
+                    "❌ Non-refundable if rejected",
+                    "💰 Guarantee deposit: 180,000 ETB",
+                    "↩ Deposit refundable within 24 hrs on timely return / status change — otherwise forfeited"
+                  ]
+                },
+                {
+                  label: "Above 40",
+                  requirements: [
+                    "Passport-size photo",
+                    "Passport (front & back page)"
+                  ],
+                  regulations: [
+                    "📊 Success rate: 90%+",
+                    "❌ Non-refundable if rejected",
+                    "💰 Guarantee deposit: 180,000 ETB",
+                    "↩ Deposit refundable within 24 hrs on timely return / status change — otherwise forfeited"
+                  ]
+                }
+              ]
+            },
+            {
+              label: "Family Invitation Visa",
+              requirements: [
+                "Bank statement",
+                "Passport-size photo",
+                "Passport (front & back page)"
+              ],
+              regulations: [
+                "📊 Success rate: 80%+",
+                "❌ Non-refundable if rejected"
+              ]
+            }
           ]
         },
         {
-          name: "Visa Change",
+          name: "Sharjah Visit Visa",
           items: [
-            "A2A Visa Change (Airport to Airport)",
-            "Inside-country visa change",
-            "Status change & file transfer"
+            {
+              label: "30 Days — Single  |  37,500 ETB",
+              requirements: ["Passport-size photo", "Passport (front & back page)"],
+              regulations: [
+                "❌ Non-refundable if rejected",
+                "💰 Guarantee deposit: 180,000 ETB",
+                "↩ Deposit refundable within 24 hrs on timely return / status change — otherwise forfeited"
+              ]
+            },
+            {
+              label: "30 Days — Multiple  |  76,500 ETB",
+              requirements: ["Passport-size photo", "Passport (front & back page)"],
+              regulations: [
+                "❌ Non-refundable if rejected",
+                "💰 Guarantee deposit: 180,000 ETB",
+                "↩ Deposit refundable within 24 hrs on timely return / status change — otherwise forfeited"
+              ]
+            },
+            {
+              label: "60 Days — Single  |  76,500 ETB",
+              requirements: ["Passport-size photo", "Passport (front & back page)"],
+              regulations: [
+                "❌ Non-refundable if rejected",
+                "💰 Guarantee deposit: 180,000 ETB",
+                "↩ Deposit refundable within 24 hrs on timely return / status change — otherwise forfeited"
+              ]
+            },
+            {
+              label: "60 Days — Multiple  |  112,500 ETB",
+              requirements: ["Passport-size photo", "Passport (front & back page)"],
+              regulations: [
+                "❌ Non-refundable if rejected",
+                "💰 Guarantee deposit: 180,000 ETB",
+                "↩ Deposit refundable within 24 hrs on timely return / status change — otherwise forfeited"
+              ]
+            },
+            {
+              label: "Family Invitation Visa",
+              requirements: [
+                "Bank statement",
+                "Passport-size photo",
+                "Passport (front & back page)"
+              ],
+              regulations: ["❌ Non-refundable if rejected"]
+            }
           ]
         },
         {
-          name: "Visa & Immigration Services",
+          name: "Visa Change (A2A)",
           items: [
-            "New Visa Application",
-            "Visa Extension",
-            "Visa Cancellation",
-            "Overstay Fine Check & Clearance",
-            "Visa Status Check",
-            "Exit Status Check"
+            {
+              label: "Dubai  —  3,100 AED",
+              regulations: ["✈️ Includes Flight Ticket & Visa"]
+            },
+            {
+              label: "Sharjah  —  2,700 AED",
+              regulations: ["✈️ Includes Flight Ticket & Visa"]
+            }
           ]
+        },
+        {
+          name: "Visa Extension",
+          terminalSection: true,
+          regulations: ["📝 Extends current visa validity without leaving the country (where applicable)"],
+          inquiry: "Hi Work Dan! I need a Visa Extension — please provide pricing & requirements."
+        },
+        {
+          name: "Visa Cancellation",
+          terminalSection: true,
+          regulations: ["📝 Cancels current active UAE visa"],
+          inquiry: "Hi Work Dan! I need a Visa Cancellation — please provide pricing & requirements."
         }
       ],
-      inquiry: "Hi Work Dan! I would like to inquire about UAE Visa Services (Visit Visa / Change / Extension / Fine Check)."
+      inquiry: "Hi Work Dan! I would like to inquire about UAE Visa Services."
     },
     am: {
-      btnTitle: "🇦🇪 የ UAE ቪዛ",
-      title: "🇦🇪 የኤሚሬቶች (UAE) የቪዛ አገልግሎቶች",
-      tagline: "የ 30 እና 60 ቀናት ቱሪስት ቪዛ፣ በሀገር ውስጥና A2A የቪዛ ቅያሬ፣ ማራዘሚያ እና የቅጣት ምርመራ።",
+      btnTitle: "🇦🇪 የ UAE ቪዛ አገልግሎቶች",
+      title: "🇦🇪 የኤሚሬቶች (UAE) ቪዛ አገልግሎቶች",
+      tagline: "የዱባይና ሻርጃህ ጉብኝት ቪዛ፣ A2A ቪዛ ቅያሬ፣ ቪዛ ማራዘሚያ እና ስረዛ።",
       sections: [
         {
-          name: "የጉብኝት ቪዛ (Visit Visa)",
+          name: "የዱባይ ጉብኝት ቪዛ",
           items: [
-            "የዱባይ ቪዛ (የ 30 ቀናት እና 60 ቀናት)",
-            "የሻርጃህ ቪዛ",
-            "የአቡ ዳቢ ቪዛ",
-            "የራስ አል ካይማህ ቪዛ"
+            {
+              label: "96 ሰዓታት",
+              requirements: ["ፓስፖርት (የፊትና የኋላ ገጽ)", "የፓስፖርት ፎቶ"],
+              regulations: ["💰 ዋስትና ተቀማጭ: 300,000 ብር"]
+            },
+            {
+              label: "30 ቀናት — ነጠላ  |  24,500 ብር",
+              ageOptions: [
+                {
+                  label: "ዕድሜ 41 ያልሞሉ (Under 41)",
+                  requirements: [
+                    "የ6 ወር Bank Statement (ለ4 ወር ቢሎክ ቢያንስ $4,000 USD ቀሪ ሂሳብ)",
+                    "የፓስፖርት ፎቶ",
+                    "ፓስፖርት (የፊትና የኋላ ገጽ)"
+                  ],
+                  regulations: [
+                    "📊 የስኬት ዕድል: ~50%",
+                    "❌ ቪዛ ቢሰረዝ ተመላሽ ያልሆነ",
+                    "💰 ዋስትና ተቀማጭ: 180,000 ብር",
+                    "↩ ውስጥ 24 ሰዓት በወቅቱ ሲወጡ / ስታተስ ሲቀይሩ ተቀማጩ ይመለሳል — ካልሆነ ይቀርታል"
+                  ]
+                },
+                {
+                  label: "ዕድሜ 40 ያለፋቸው (Above 40)",
+                  requirements: [
+                    "የፓስፖርት ፎቶ",
+                    "ፓስፖርት (የፊትና የኋላ ገጽ)"
+                  ],
+                  regulations: [
+                    "📊 የስኬት ዕድል: 90%+",
+                    "❌ ቪዛ ቢሰረዝ ተምላሽ ያልሆነ",
+                    "💰 ዋስትና ተቀማጭ: 180,000 ብር",
+                    "↩ ውስጥ 24 ሰዓት በወቅቱ ሲወጡ / ስታተስ ሲቀይሩ ተቀማጩ ይመለሳል — ካልሆነ ይቀርታል"
+                  ]
+                }
+              ]
+            },
+            {
+              label: "30 ቀናት — ሁለቴ+  |  43,500 ብር",
+              ageOptions: [
+                {
+                  label: "ዕድሜ 41 ያልሞሉ (Under 41)",
+                  requirements: [
+                    "የ6 ወር Bank Statement (ለ4 ወር ቢሎክ ቢያንስ $4,000 USD ቀሪ ሂሳብ)",
+                    "የፓስፖርት ፎቶ",
+                    "ፓስፖርት (የፊትና የኋላ ገጽ)"
+                  ],
+                  regulations: [
+                    "📊 የስኬት ዕድል: ~50%",
+                    "❌ ቪዛ ቢሰረዝ ተምላሽ ያልሆነ",
+                    "💰 ዋስትና ተቀማጭ: 180,000 ብር",
+                    "↩ ውስጥ 24 ሰዓት በወቅቱ ሲወጡ / ስታተስ ሲቀይሩ ተቀማጩ ይመለሳል — ካልሆነ ይቀርታል"
+                  ]
+                },
+                {
+                  label: "ዕድሜ 40 ያለፋቸው (Above 40)",
+                  requirements: [
+                    "የፓስፖርት ፎቶ",
+                    "ፓስፖርት (የፊትና የኋላ ገጽ)"
+                  ],
+                  regulations: [
+                    "📊 የስኬት ዕድል: 90%+",
+                    "❌ ቪዛ ቢሰረዝ ተምላሽ ያልሆነ",
+                    "💰 ዋስትና ተቀማጭ: 180,000 ብር",
+                    "↩ ውስጥ 24 ሰዓት በወቅቱ ሲወጡ / ስታተስ ሲቀይሩ ተቀማጩ ይመለሳል — ካልሆነ ይቀርታል"
+                  ]
+                }
+              ]
+            },
+            {
+              label: "60 ቀናት — ነጠላ  |  49,500 ብር",
+              ageOptions: [
+                {
+                  label: "ዕድሜ 41 ያልሞሉ (Under 41)",
+                  requirements: [
+                    "የ6 ወር Bank Statement (ለ4 ወር ቢሎክ ቢያንስ $4,000 USD ቀሪ ሂሳብ)",
+                    "የፓስፖርት ፎቶ",
+                    "ፓስፖርት (የፊትና የኋላ ገጽ)"
+                  ],
+                  regulations: [
+                    "📊 የስኬት ዕድል: ~50%",
+                    "❌ ቪዛ ቢሰረዝ ተምላሽ ያልሆነ",
+                    "💰 ዋስትና ተቀማጭ: 180,000 ብር",
+                    "↩ ውስጥ 24 ሰዓት በወቅቱ ሲወጡ / ስታተስ ሲቀይሩ ተቀማጩ ይመለሳል — ካልሆነ ይቀርታል"
+                  ]
+                },
+                {
+                  label: "ዕድሜ 40 ያለፋቸው (Above 40)",
+                  requirements: [
+                    "የፓስፖርት ፎቶ",
+                    "ፓስፖርት (የፊትና የኋላ ገጽ)"
+                  ],
+                  regulations: [
+                    "📊 የስኬት ዕድል: 90%+",
+                    "❌ ቪዛ ቢሰረዝ ተምላሽ ያልሆነ",
+                    "💰 ዋስትና ተቀማጭ: 180,000 ብር",
+                    "↩ ውስጥ 24 ሰዓት በወቅቱ ሲወጡ / ስታተስ ሲቀይሩ ተቀማጩ ይመለሳል — ካልሆነ ይቀርታል"
+                  ]
+                }
+              ]
+            },
+            {
+              label: "60 ቀናት — ሁለቴ+  |  74,500 ብር",
+              ageOptions: [
+                {
+                  label: "ዕድሜ 41 ያልሞሉ (Under 41)",
+                  requirements: [
+                    "የ6 ወር Bank Statement (ለ4 ወር ቢሎክ ቢያንስ $4,000 USD ቀሪ ሂሳብ)",
+                    "የፓስፖርት ፎቶ",
+                    "ፓስፖርት (የፊትና የኋላ ገጽ)"
+                  ],
+                  regulations: [
+                    "📊 የስኬት ዕድል: ~50%",
+                    "❌ ቪዛ ቢሰረዝ ተምላሽ ያልሆነ",
+                    "💰 ዋስትና ተቀማጭ: 180,000 ብር",
+                    "↩ ውስጥ 24 ሰዓት በወቅቱ ሲወጡ / ስታተስ ሲቀይሩ ተቀማጩ ይመለሳል — ካልሆነ ይቀርታል"
+                  ]
+                },
+                {
+                  label: "ዕድሜ 40 ያለፋቸው (Above 40)",
+                  requirements: [
+                    "የፓስፖርት ፎቶ",
+                    "ፓስፖርት (የፊትና የኋላ ገጽ)"
+                  ],
+                  regulations: [
+                    "📊 የስኬት ዕድል: 90%+",
+                    "❌ ቪዛ ቢሰረዝ ተምላሽ ያልሆነ",
+                    "💰 ዋስትና ተቀማጭ: 180,000 ብር",
+                    "↩ ውስጥ 24 ሰዓት በወቅቱ ሲወጡ / ስታተስ ሲቀይሩ ተቀማጩ ይመለሳል — ካልሆነ ይቀርታል"
+                  ]
+                }
+              ]
+            },
+            {
+              label: "የቤተሰብ ግብዣ ቪዛ",
+              requirements: [
+                "Bank Statement",
+                "የፓስፖርት ፎቶ",
+                "ፓስፖርት (የፊትና የኋላ ገጽ)"
+              ],
+              regulations: [
+                "📊 የስኬት ዕድል: 80%+",
+                "❌ ቪዛ ቢሰረዝ ተምላሽ ያልሆነ"
+              ]
+            }
           ]
         },
         {
-          name: "የቪዛ ቅያሬ (Visa Change)",
+          name: "የሻርጃህ ጉብኝት ቪዛ",
           items: [
-            "A2A የቪዛ ቅያሬ (ከአየር ማረፊያ አየር ማረፊያ)",
-            "በሀገር ውስጥ የቪዛ ቅያሬ (Inside-country change)",
-            "የቪዛ ሁኔታ/ስታተስ ለውጥ (Status change)"
+            {
+              label: "30 ቀናት — ነጠላ  |  37,500 ብር",
+              requirements: ["የፓስፖርት ፎቶ", "ፓስፖርት (የፊትና የኋላ ገጽ)"],
+              regulations: [
+                "❌ ቪዛ ቢሰረዝ ተምላሽ ያልሆነ",
+                "💰 ዋስትና ተቀማጭ: 180,000 ብር",
+                "↩ ውስጥ 24 ሰዓት በወቅቱ ሲወጡ / ስታተስ ሲቀይሩ ተቀማጩ ይመለሳል — ካልሆነ ይቀርታል"
+              ]
+            },
+            {
+              label: "30 ቀናት — ሁለቴ+  |  76,500 ብር",
+              requirements: ["የፓስፖርት ፎቶ", "ፓስፖርት (የፊትና የኋላ ገጽ)"],
+              regulations: [
+                "❌ ቪዛ ቢሰረዝ ተምላሽ ያልሆነ",
+                "💰 ዋስትና ተቀማጭ: 180,000 ብር",
+                "↩ ውስጥ 24 ሰዓት በወቅቱ ሲወጡ / ስታተስ ሲቀይሩ ተቀማጩ ይመለሳል — ካልሆነ ይቀርታል"
+              ]
+            },
+            {
+              label: "60 ቀናት — ነጠላ  |  76,500 ብር",
+              requirements: ["የፓስፖርት ፎቶ", "ፓስፖርት (የፊትና የኋላ ገጽ)"],
+              regulations: [
+                "❌ ቪዛ ቢሰረዝ ተምላሽ ያልሆነ",
+                "💰 ዋስትና ተቀማጭ: 180,000 ብር",
+                "↩ ውስጥ 24 ሰዓት በወቅቱ ሲወጡ / ስታተስ ሲቀይሩ ተቀማጩ ይመለሳል — ካልሆነ ይቀርታል"
+              ]
+            },
+            {
+              label: "60 ቀናት — ሁለቴ+  |  112,500 ብር",
+              requirements: ["የፓስፖርት ፎቶ", "ፓስፖርት (የፊትና የኋላ ገጽ)"],
+              regulations: [
+                "❌ ቪዛ ቢሰረዝ ተምላሽ ያልሆነ",
+                "💰 ዋስትና ተቀማጭ: 180,000 ብር",
+                "↩ ውስጥ 24 ሰዓት በወቅቱ ሲወጡ / ስታተስ ሲቀይሩ ተቀማጩ ይመለሳል — ካልሆነ ይቀርታል"
+              ]
+            },
+            {
+              label: "የቤተሰብ ግብዣ ቪዛ",
+              requirements: [
+                "Bank Statement",
+                "የፓስፖርት ፎቶ",
+                "ፓስፖርት (የፊትና የኋላ ገጽ)"
+              ],
+              regulations: ["❌ ቪዛ ቢሰረዝ ተምላሽ ያልሆነ"]
+            }
           ]
         },
         {
-          name: "ተጨማሪ የቪዛ አገልግሎቶች",
+          name: "ቪዛ ቅያሬ (A2A)",
           items: [
-            "አዲስ የቪዛ ማመልከቻ",
-            "የቪዛ ማራዘሚያ (Visa Extension)",
-            "የቪዛ ስረዛ (Visa Cancellation)",
-            "የቀን ማለፍ ቅጣት ምርመራ (Overstay Fine Check)",
-            "የቪዛ ሁኔታ መከታተያ (Visa Status Check)",
-            "የመውጫ ሁኔታ መከታተያ (Exit Status Check)"
+            {
+              label: "ዱባይ  —  3,100 AED",
+              regulations: ["✈️ የበረራ ትኬት እና ቪዛ ጨምሮ"]
+            },
+            {
+              label: "ሻርጃህ  —  2,700 AED",
+              regulations: ["✈️ የበረራ ትኬት እና ቪዛ ጨምሮ"]
+            }
           ]
+        },
+        {
+          name: "ቪዛ ማራዘሚያ",
+          terminalSection: true,
+          regulations: ["📝 ያለው ቪዛ ሳይወጡ ያራዝማል (ሲፈቀድ)"],
+          inquiry: "ሰላም ወርቅ ዳን! ቪዛ ማራዘሚያ እፈልጋለሁ — ዋጋና መስፈርቶች ያሳውቁኝ።"
+        },
+        {
+          name: "ቪዛ ስረዛ",
+          terminalSection: true,
+          regulations: ["📝 ያለውን ንቁ UAE ቪዛ ይሰርዛል"],
+          inquiry: "ሰላም ወርቅ ዳን! ቪዛ ስረዛ እፈልጋለሁ — ዋጋና መስፈርቶች ያሳውቁኝ።"
         }
       ],
-      inquiry: "ሰላም ወርቅ ዳን! ስለ UAE ቪዛ አገልግሎት (ቱሪስት ቪዛ / ቅያሬ / ማራዘሚያ / ቅጣት ምርመራ) መረጃ ማግኘት እፈልጋለሁ።"
+      inquiry: "ሰላም ወርቅ ዳን! ስለ UAE ቪዛ አገልግሎቶች መረጃ ማግኘት እፈልጋለሁ።"
     }
   },
+
+  // ── 2. Flight Tickets ─────────────────────────────────────────────────────
   {
     id: "flight_tickets",
     icon: "✈️",
     en: {
       btnTitle: "✈️ Flight Tickets",
-      title: "✈️ FLIGHT TICKETS & SOTO",
-      tagline: "International and domestic airline ticketing with exclusive discounted agency and SOTO fares.",
+      title: "✈️ FLIGHT TICKETS",
+      tagline: "Local & international airline ticketing — one way, round trip, reservation, rebooking, cancellation and refund.",
       sections: [
         {
-          name: "Ticket Services",
-          items: [
-            "One-way tickets",
-            "Round-trip tickets",
-            "Flight reservations & holds",
-            "Rebooking & date alterations",
-            "Cancellations & refunds"
-          ]
+          name: "Local Tickets",
+          items: ["One Way", "Round Trip", "Reservation", "Rebooking", "Cancellation", "Refund"]
         },
         {
-          name: "International Tickets (Popular Routes)",
-          items: [
-            "Ethiopia (Addis Ababa & regional hubs)",
-            "UAE (Dubai, Sharjah, Abu Dhabi)",
-            "China (Guangzhou, Beijing, Shanghai)",
-            "Turkey (Istanbul)",
-            "Thailand (Bangkok)",
-            "Europe (London, Paris, Frankfurt, Rome, etc.)",
-            "Africa (Kenya, South Africa, Nigeria, etc.)",
-            "USA & Canada (Washington, New York, Toronto, etc.)"
-          ]
-        },
-        {
-          name: "Domestic Tickets",
-          items: [
-            "Ethiopian domestic flights (All regional airports & destinations)"
-          ]
+          name: "International Tickets",
+          items: ["One Way", "Round Trip", "Reservation", "Rebooking", "Cancellation", "Refund"]
         }
       ],
-      inquiry: "Hi Work Dan! I need assistance with Flight Tickets (Domestic / International / SOTO booking)."
+      inquiry: "Hi Work Dan! I need assistance with Flight Tickets (Local / International)."
     },
     am: {
       btnTitle: "✈️ የበረራ ትኬቶች",
-      title: "✈️ የበረራ ትኬት አገልግሎቶች እና SOTO",
-      tagline: "ዓለም አቀፍ እና የሀገር ውስጥ የበረራ ትኬቶች በተመጣጣኝ የኤጀንሲ እና የ SOTO ዋጋ።",
+      title: "✈️ የበረራ ትኬት አገልግሎቶች",
+      tagline: "የሀገር ውስጥ እና ዓለም አቀፍ ትኬቶች — አንድ አቅጣጫ፣ ደርሶ መልስ፣ ቦታ ማስያዝ፣ ቀን መቀየር፣ ስረዛ እና ተመላሽ።",
       sections: [
         {
-          name: "የትኬት አገልግሎቶች",
-          items: [
-            "የአንድ አቅጣጫ ትኬት (One-way)",
-            "የደርሶ መልስ ትኬት (Round-trip)",
-            "ቦታ ማስያዝ (Reservation)",
-            "ቀን መቀየርና ማስተካከል (Rebooking)",
-            "ትኬት መሰረዝ (Cancellation)",
-            "የተመላሽ ገንዘብ ሂደት (Refund)"
-          ]
+          name: "የሀገር ውስጥ ትኬቶች",
+          items: ["አንድ አቅጣጫ (One Way)", "ደርሶ መልስ (Round Trip)", "ቦታ ማስያዝ (Reservation)", "ቀን መቀየር (Rebooking)", "ስረዛ (Cancellation)", "ተመላሽ ገንዘብ (Refund)"]
         },
         {
-          name: "ዓለም አቀፍ በረራዎች (ተወዳጅ መዳረሻዎች)",
-          items: [
-            "ኢትዮጵያ (አዲስ አበባና ሌሎች ከተሞች)",
-            "የተባበሩት አረብ ኤሚሬቶች (ዱባይ፣ ሻርጃህ፣ አቡ ዳቢ)",
-            "ቻይና (ጓንግዡ፣ ቤጂንግ፣ ሻንጋይ)",
-            "ቱርክ (ኢስታንቡል)",
-            "ታይላንድ (ባንኮክ)",
-            "አውሮፓ (ለንደን፣ ፓሪስ፣ ፍራንክፈርት፣ ሮም ወዘተ)",
-            "አፍሪካ (ኬንያ፣ ደቡብ አፍሪካ፣ ናይጄሪያ ወዘተ)",
-            "አሜሪካ እና ካናዳ (ዋሽንግተን፣ ኒው ዮርክ፣ ቶሮንቶ ወዘተ)"
-          ]
-        },
-        {
-          name: "የሀገር ውስጥ በረራዎች",
-          items: [
-            "የኢትዮጵያ የሀገር ውስጥ በረራዎች (ወደ ሁሉም የክልል አውሮፕላን ማረፊያዎች)"
-          ]
+          name: "ዓለም አቀፍ ትኬቶች",
+          items: ["አንድ አቅጣጫ (One Way)", "ደርሶ መልስ (Round Trip)", "ቦታ ማስያዝ (Reservation)", "ቀን መቀየር (Rebooking)", "ስረዛ (Cancellation)", "ተመላሽ ገንዘብ (Refund)"]
         }
       ],
-      inquiry: "ሰላም ወርቅ ዳን! የበረራ ትኬት መቁረጥ / ማስተካከል / SOTO ትኬት እፈልጋለሁ።"
+      inquiry: "ሰላም ወርቅ ዳን! የበረራ ትኬት (ሀገር ውስጥ / ዓለም አቀፍ) እፈልጋለሁ።"
     }
   },
+
+  // ── 3. Hotel & Accommodation ──────────────────────────────────────────────
   {
     id: "hotel_accommodation",
     icon: "🏨",
     en: {
-      btnTitle: "🏨 Hotel Booking",
+      btnTitle: "🏨 Hotel & Accommodation",
       title: "🏨 HOTEL & ACCOMMODATION",
-      tagline: "Worldwide hotel reservations, luxury stays, budget apartments, and combo holiday packages.",
+      tagline: "Booking, confirmation, cancellation and refund — local and international (UAE, Africa, Asia, Europe, Middle East).",
       sections: [
         {
-          name: "Hotel Services",
+          name: "Booking",
           items: [
-            "Hotel Booking & Instant Confirmation",
-            "Reservation Voucher Issuance",
-            "Booking Cancellation & Amendments",
-            "Hotel + Flight combo package"
+            "Local",
+            "International — UAE (Dubai)",
+            "International — UAE (Sharjah)",
+            "International — UAE (Abu Dhabi)",
+            "International — UAE (Other Emirates)",
+            "International — Africa",
+            "International — Asia",
+            "International — Europe",
+            "International — Middle East"
           ]
         },
         {
-          name: "UAE Hotels & Apartments",
+          name: "Confirmation",
           items: [
-            "Dubai (Downtown, Marina, Deira, Bur Dubai)",
-            "Sharjah (City Center & Beachfront)",
-            "Abu Dhabi (Corniche & Yas Island)",
-            "Other Emirates (Ajman, Ras Al Khaimah, Fujairah)"
+            "Local",
+            "International — UAE (Dubai)",
+            "International — UAE (Sharjah)",
+            "International — UAE (Abu Dhabi)",
+            "International — UAE (Other Emirates)",
+            "International — Africa",
+            "International — Asia",
+            "International — Europe",
+            "International — Middle East"
           ]
         },
         {
-          name: "International Hotels",
+          name: "Cancellation",
           items: [
-            "Africa (Addis Ababa, Nairobi, Johannesburg, etc.)",
-            "Asia (Guangzhou, Bangkok, Kuala Lumpur, etc.)",
-            "Europe (London, Paris, Istanbul, Rome, etc.)",
-            "Middle East (Riyadh, Doha, Muscat, etc.)"
+            "Local",
+            "International — UAE (Dubai)",
+            "International — UAE (Sharjah)",
+            "International — UAE (Abu Dhabi)",
+            "International — UAE (Other Emirates)",
+            "International — Africa",
+            "International — Asia",
+            "International — Europe",
+            "International — Middle East"
+          ]
+        },
+        {
+          name: "Refund",
+          items: [
+            "Local",
+            "International — UAE (Dubai)",
+            "International — UAE (Sharjah)",
+            "International — UAE (Abu Dhabi)",
+            "International — UAE (Other Emirates)",
+            "International — Africa",
+            "International — Asia",
+            "International — Europe",
+            "International — Middle East"
           ]
         }
       ],
-      inquiry: "Hi Work Dan! I would like to book or inquire about Hotel Accommodations."
+      inquiry: "Hi Work Dan! I would like to inquire about Hotel Booking / Confirmation / Cancellation / Refund."
     },
     am: {
-      btnTitle: "🏨 ሆቴል ማስያዝ",
-      title: "🏨 የሆቴል እና ማረፊያ ቦታ ማስያዝ",
-      tagline: "የዓለም አቀፍ እና የዱባይ ምርጥ ሆቴሎች፣ አፓርትመንቶች እና የሆቴል+በረራ ፓኬጆች በተመጣጣኝ ዋጋ።",
+      btnTitle: "🏨 ሆቴል እና ማረፊያ",
+      title: "🏨 ሆቴል እና ማረፊያ ቦታ",
+      tagline: "ቦታ ማስያዝ፣ ማረጋገጫ፣ ስረዛ እና ተመላሽ — ሀገር ውስጥ እና ዓለም አቀፍ (UAE፣ አፍሪካ፣ እስያ፣ አውሮፓ፣ መካከለኛው ምስራቅ)።",
       sections: [
         {
-          name: "የሆቴል አገልግሎቶች",
+          name: "ቦታ ማስያዝ (Booking)",
           items: [
-            "የሆቴል ቦታ ማስያዝ (Booking)",
-            "ፈጣን የቦታ ማረጋገጫ ቫውቸር (Confirmation)",
-            "ቀን መቀየርና ስረዛ (Cancellation)",
-            "ሆቴል + የበረራ ትኬት ጥምር ፓኬጅ"
+            "ሀገር ውስጥ (Local)",
+            "ዓለም አቀፍ — UAE (ዱባይ)",
+            "ዓለም አቀፍ — UAE (ሻርጃህ)",
+            "ዓለም አቀፍ — UAE (አቡ ዳቢ)",
+            "ዓለም አቀፍ — UAE (ሌሎች ኤሚሬቶች)",
+            "ዓለም አቀፍ — አፍሪካ",
+            "ዓለም አቀፍ — እስያ",
+            "ዓለም አቀፍ — አውሮፓ",
+            "ዓለም አቀፍ — መካከለኛው ምስራቅ"
           ]
         },
         {
-          name: "በተባበሩት አረብ ኤሚሬቶች",
+          name: "ማረጋገጫ (Confirmation)",
           items: [
-            "ዱባይ (ዳውንታውን፣ ማሪና፣ ዴይራ፣ ቡር ዱባይ)",
-            "ሻርጃህ (ከተማ ውስጥ እና የባህር ዳርቻ)",
-            "አቡ ዳቢ (ኮርኒሽ፣ ያስ ደሴት)",
-            "ሌሎች ኤሚሬቶች (አጅማን፣ ራስ አል ካይማህ ወዘተ)"
+            "ሀገር ውስጥ (Local)",
+            "ዓለም አቀፍ — UAE (ዱባይ)",
+            "ዓለም አቀፍ — UAE (ሻርጃህ)",
+            "ዓለም አቀፍ — UAE (አቡ ዳቢ)",
+            "ዓለም አቀፍ — UAE (ሌሎች ኤሚሬቶች)",
+            "ዓለም አቀፍ — አፍሪካ",
+            "ዓለም አቀፍ — እስያ",
+            "ዓለም አቀፍ — አውሮፓ",
+            "ዓለም አቀፍ — መካከለኛው ምስራቅ"
           ]
         },
         {
-          name: "ዓለም አቀፍ ሆቴሎች",
+          name: "ስረዛ (Cancellation)",
           items: [
-            "አፍሪካ (አዲስ አበባ፣ ናይሮቢ፣ ጆሃንስበርግ ወዘተ)",
-            "እስያ (ጓንግዡ፣ ባንኮክ፣ ኩዋላ ላምፑር ወዘተ)",
-            "አውሮፓ (ለንደን፣ ፓሪስ፣ ኢስታንቡል ወዘተ)",
-            "መካከለኛው ምስራቅ (ሪያድ፣ ዶሃ፣ ማስካት ወዘተ)"
+            "ሀገር ውስጥ (Local)",
+            "ዓለም አቀፍ — UAE (ዱባይ)",
+            "ዓለም አቀፍ — UAE (ሻርጃህ)",
+            "ዓለም አቀፍ — UAE (አቡ ዳቢ)",
+            "ዓለም አቀፍ — UAE (ሌሎች ኤሚሬቶች)",
+            "ዓለም አቀፍ — አፍሪካ",
+            "ዓለም አቀፍ — እስያ",
+            "ዓለም አቀፍ — አውሮፓ",
+            "ዓለም አቀፍ — መካከለኛው ምስራቅ"
+          ]
+        },
+        {
+          name: "ተመላሽ ገንዘብ (Refund)",
+          items: [
+            "ሀገር ውስጥ (Local)",
+            "ዓለም አቀፍ — UAE (ዱባይ)",
+            "ዓለም አቀፍ — UAE (ሻርጃህ)",
+            "ዓለም አቀፍ — UAE (አቡ ዳቢ)",
+            "ዓለም አቀፍ — UAE (ሌሎች ኤሚሬቶች)",
+            "ዓለም አቀፍ — አፍሪካ",
+            "ዓለም አቀፍ — እስያ",
+            "ዓለም አቀፍ — አውሮፓ",
+            "ዓለም አቀፍ — መካከለኛው ምስራቅ"
           ]
         }
       ],
-      inquiry: "ሰላም ወርቅ ዳን! የሆቴል ቦታ ማስያዝ / ዋጋ መጠየቅ እፈልጋለሁ።"
+      inquiry: "ሰላም ወርቅ ዳን! ስለ ሆቴል ቦታ ማስያዝ / ማረጋገጫ / ስረዛ / ተመላሽ ጥያቄ ነበረኝ።"
     }
   },
+
+  // ── 4. Tour Packages ──────────────────────────────────────────────────────
   {
     id: "tour_packages",
     icon: "🌍",
     en: {
       btnTitle: "🌍 Tour Packages",
-      title: "🌍 TOUR PACKAGES & EXCURSIONS",
-      tagline: "Signature holiday packages, desert adventures, city exploration, and global group departures.",
+      title: "🌍 TOUR PACKAGES",
+      tagline: "Local tours, UAE activities (City Tour 100 AED, Desert Safari 100 AED, Cross Dinner 150 AED) and international destinations.",
       sections: [
+        {
+          name: "Local Tour",
+          terminalSection: true,
+          inquiry: "Hi Work Dan! I'm interested in a Local Tour Package."
+        },
         {
           name: "UAE Tours & Activities",
           items: [
-            "Dubai Half-Day & Full-Day City Tour",
-            "Abu Dhabi City Tour & Grand Mosque",
-            "Evening Desert Safari with BBQ Dinner & Shows",
-            "Dhow / Marina Luxury Cruise Dinner",
-            "Burj Khalifa At The Top tickets",
-            "Museum of the Future & Top Attractions",
-            "Jet Ski & Watersports",
-            "Private Luxury Yacht Charter"
+            "City Tour (100 AED)",
+            "Desert Safari (100 AED)",
+            "Cross Dinner (150 AED)",
+            "Dhow Cruise",
+            "Museum of the Future",
+            "Jet Ski & Water Sports",
+            "Private Yacht"
           ]
         },
         {
-          name: "International Tours",
+          name: "International Destinations",
           items: [
-            "China (Business & Leisure Tours)",
-            "Ethiopia (Historical Circuit & Nature Tours)",
-            "Thailand (Bangkok & Phuket Tours)",
-            "Georgia (Tbilisi & Kazbegi Tours)",
-            "South Africa (Cape Town & Safari)",
-            "Custom Worldwide Destinations"
-          ]
-        },
-        {
-          name: "Special Packages",
-          items: [
-            "Flight + Hotel Package",
-            "Hotel + Tour Excursions Package",
-            "Full Dubai All-in-One Holiday Package"
+            "China",
+            "Thailand",
+            "Nairobi (Kenya)",
+            "Maldives",
+            "Singapore",
+            "Armenia",
+            "Seychelles",
+            "Other Destinations"
           ]
         }
       ],
-      inquiry: "Hi Work Dan! I would like to inquire about Tour Packages & Activities."
+      inquiry: "Hi Work Dan! I would like to inquire about Tour Packages."
     },
     am: {
       btnTitle: "🌍 የቱር ፓኬጆች",
-      title: "🌍 የቱር ፓኬጆች እና የጉብኝት መርሃ-ግብሮች",
-      tagline: "የዱባይ ልዩ የጉብኝት መርሃ-ግብሮች፣ የበረሃ ሳፋሪ፣ የመርከብ እራት እና የዓለም አቀፍ ቱር ፓኬጆች።",
+      title: "🌍 የቱር ፓኬጆች",
+      tagline: "ሀገር ውስጥ ቱር፣ UAE ጉብኝቶች (City Tour 100 AED፣ Desert Safari 100 AED፣ Cross Dinner 150 AED) እና ዓለም አቀፍ መዳረሻዎች።",
       sections: [
         {
-          name: "የተባበሩት አረብ ኤሚሬቶች ጉብኝቶች",
+          name: "ሀገር ውስጥ ቱር (Local Tour)",
+          terminalSection: true,
+          inquiry: "ሰላም ወርቅ ዳን! ሀገር ውስጥ የቱር ፓኬጅ እፈልጋለሁ።"
+        },
+        {
+          name: "UAE ጉብኝቶችና እንቅስቃሴዎች",
           items: [
-            "የዱባይ ከተማ ጉብኝት (City Tour)",
-            "የአቡ ዳቢ ከተማና ግራንድ መስጊድ ጉብኝት",
-            "የበረሃ ሳፋሪ ከእራትና የቀጥታ ትርኢት ጋር (Desert Safari)",
-            "የመርከብ ላይ እራትና ምሽት ጉብኝት (Dhow / Marina Cruise Dinner)",
-            "የቡርጅ ካሊፋ መግቢያ ትኬት (Burj Khalifa)",
-            "የወደፊቱ ሙዚየም እና ሌሎች መስህቦች (Museum of the Future)",
-            "ጄት ስኪ እና የውሃ ላይ ስፖርቶች (Jet Ski)",
-            "የግል የቅንጦት ያች ኪራይ (Luxury Yacht)"
+            "City Tour (100 AED)",
+            "Desert Safari (100 AED)",
+            "Cross Dinner (150 AED)",
+            "Dhow Cruise",
+            "Museum of the Future",
+            "Jet Ski እና የውሃ ስፖርቶች",
+            "Private Yacht"
           ]
         },
         {
-          name: "ዓለም አቀፍ የቱር ጉዞዎች",
+          name: "ዓለም አቀፍ መዳረሻዎች",
           items: [
-            "ቻይና (የቢዝነስና የቱሪዝም ጉዞዎች)",
-            "ኢትዮጵያ (ታሪካዊና የተፈጥሮ መስህቦች ጉብኝት)",
-            "ታይላንድ (ባንኮክና ፉኬት)",
-            "ጆርጂያ (ትብሊሲና ካዝቤጊ)",
-            "ደቡብ አፍሪካ (ኬፕ ታውንና ሳፋሪ)",
-            "ሌሎች ልዩ ዓለም አቀፍ መዳረሻዎች"
-          ]
-        },
-        {
-          name: "ጥምር ፓኬጆች",
-          items: [
-            "በረራ + ሆቴል (Flight + Hotel)",
-            "ሆቴል + ጉብኝት (Hotel + Tour)",
-            "ሙሉ ፓኬጅ (Full Package - All-in-One)"
+            "ቻይና (China)",
+            "ታይላንድ (Thailand)",
+            "ናይሮቢ (Kenya)",
+            "ማልዲቭስ (Maldives)",
+            "ሲንጋፖር (Singapore)",
+            "አርሜኒያ (Armenia)",
+            "ሴሼልስ (Seychelles)",
+            "ሌሎች መዳረሻዎች"
           ]
         }
       ],
-      inquiry: "ሰላም ወርቅ ዳን! ስለ ቱር ፓኬጆች እና የጉብኝት መርሃ-ግብሮች መረጃና ቦታ ማስያዝ እፈልጋለሁ።"
+      inquiry: "ሰላም ወርቅ ዳን! ስለ ቱር ፓኬጆች መረጃ እፈልጋለሁ።"
     }
   },
+
+  // ── 5. International Visa ─────────────────────────────────────────────────
   {
     id: "intl_visa",
     icon: "🛂",
     en: {
-      btnTitle: "🛂 Intl Visas",
+      btnTitle: "🛂 International Visa",
       title: "🛂 INTERNATIONAL VISA SERVICES",
-      tagline: "Worldwide visa assistance, document preparation, appointment booking, and expert guidance.",
+      tagline: "Asia, Europe, Middle East & Africa — professional visa processing with full document guidance.",
       sections: [
         {
           name: "Asia",
-          items: [
-            "China Visa (Business & Tourist)",
-            "Thailand Visa",
-            "Malaysia Visa",
-            "Indonesia Visa",
-            "Other Asian Destinations"
-          ]
+          requirements: [
+            "Valid passport (min 6 months validity)",
+            "Recent passport-size photo (white background)",
+            "Bank statement / proof of sufficient funds",
+            "Flight itinerary (confirmed or provisional)"
+          ],
+          items: ["China", "Thailand", "Malaysia", "Indonesia"]
         },
         {
           name: "Europe",
-          items: [
-            "Schengen Visa Consultation & Booking",
-            "Hungary Visa",
-            "France Visa",
-            "Italy Visa"
-          ]
+          requirements: [
+            "Valid passport",
+            "Biometric passport-size photo",
+            "Travel insurance (min coverage required)",
+            "Flight reservation",
+            "Hotel booking confirmation",
+            "Bank statements (proof of sufficient funds)",
+            "Employment or business proof"
+          ],
+          items: ["Schengen", "Hungary", "France", "Italy"]
         },
         {
-          name: "Middle East",
-          items: [
-            "UAE Visa Services",
-            "Saudi Arabia (Tourist & Umrah Visas)",
-            "Qatar Visa",
-            "Oman Visa",
-            "Other GCC & Middle East Countries"
-          ]
-        },
-        {
-          name: "Africa",
-          items: [
-            "South Africa Visa",
-            "Kenya e-Visa / ETA",
-            "Tanzania Visa",
-            "Uganda Visa",
-            "Rwanda Visa",
-            "Zambia Visa",
-            "Other African Countries"
-          ]
-        },
-        {
-          name: "Visa Services Offered",
-          items: [
-            "Tourist Visa processing",
-            "Business Visa assistance",
-            "Invitation Letters arrangement",
-            "Embassy / VFS Visa Appointment Booking",
-            "One-on-One Visa Consultation & File Assessment"
-          ]
+          name: "Middle East & Africa",
+          requirements: [
+            "Valid passport (min 6 months validity)",
+            "Passport-size photo",
+            "Yellow fever vaccination card (applicable African countries)",
+            "Flight itinerary",
+            "Hotel booking confirmation"
+          ],
+          items: ["Saudi Arabia", "Qatar", "Oman", "Kenya", "Tanzania", "Uganda", "Rwanda", "Zambia"]
         }
       ],
-      inquiry: "Hi Work Dan! I need assistance with International Visa Services."
+      inquiry: "Hi Work Dan! I need assistance with an International Visa."
     },
     am: {
       btnTitle: "🛂 ዓለም አቀፍ ቪዛ",
       title: "🛂 ዓለም አቀፍ የቪዛ አገልግሎቶች",
-      tagline: "ወደተለያዩ የዓለማችን ሀገራት ለሚደረጉ ጉዞዎች የቪዛ ማመልከቻ፣ ቀጠሮ እና የተሟላ ሰነድ ዝግጅት።",
+      tagline: "እስያ፣ አውሮፓ፣ መካከለኛው ምስራቅ እና አፍሪካ — ሙሉ ሰነድ ዝግጅትና ቀጠሮ ጨምሮ።",
       sections: [
         {
           name: "እስያ (Asia)",
-          items: [
-            "የቻይና ቪዛ (የንግድና የቱሪስት)",
-            "የታይላንድ ቪዛ",
-            "የማሌዥያ ቪዛ",
-            "የኢንዶኔዢያ ቪዛ",
-            "ሌሎች የእስያ ሀገራት"
-          ]
+          requirements: [
+            "ህጋዊ ፓስፖርት (ቢያንስ 6 ወር የሚቆይ)",
+            "ቅርብ ጊዜ የፓስፖርት ፎቶ (ነጭ ዳራ)",
+            "Bank Statement / የፋይናንስ ማስረጃ",
+            "የበረራ ቅድሚያ ቦታ ማስያዝ (Provisional / Confirmed)"
+          ],
+          items: ["ቻይና (China)", "ታይላንድ (Thailand)", "ማሌዥያ (Malaysia)", "ኢንዶኔዢያ (Indonesia)"]
         },
         {
           name: "አውሮፓ (Europe)",
-          items: [
-            "የሼንገን (Schengen) ቪዛ ፋይል ዝግጅትና ቀጠሮ",
-            "የሀንጋሪ ቪዛ",
-            "የፈረንሳይ ቪዛ",
-            "የጣሊያን ቪዛ"
-          ]
+          requirements: [
+            "ህጋዊ ፓስፖርት",
+            "ባዮሜትሪክ የፓስፖርት ፎቶ",
+            "Travel Insurance (የሚጠበቀው ዝቅተኛ ሽፋን ጨምሮ)",
+            "የበረራ ቅድሚያ ቦታ ማስያዝ",
+            "የሆቴል ቦታ ማስያዝ ማረጋገጫ",
+            "Bank Statements (የፋይናንስ ማስረጃ)",
+            "የሥራ ወይም የንግድ ማስረጃ"
+          ],
+          items: ["ሼንገን (Schengen)", "ሀንጋሪ (Hungary)", "ፈረንሳይ (France)", "ጣሊያን (Italy)"]
         },
         {
-          name: "መካከለኛው ምስራቅ (Middle East)",
-          items: [
-            "የተባበሩት አረብ ኤሚሬቶች ቪዛ",
-            "የሳውዲ አረቢያ ቪዛ (የዑምራና ቱሪስት)",
-            "የኳታር ቪዛ",
-            "የኦማን ቪዛ",
-            "ሌሎች የባህረ ሰላጤው ሀገራት"
-          ]
-        },
-        {
-          name: "አፍሪካ (Africa)",
-          items: [
-            "የደቡብ አፍሪካ ቪዛ",
-            "የኬንያ ኢ-ቪዛ / ETA",
-            "የታንዛኒያ ቪዛ",
-            "የዩጋንዳ ቪዛ",
-            "የሩዋንዳ ቪዛ",
-            "የዛምቢያ ቪዛ",
-            "ሌሎች የአፍሪካ ሀገራት"
-          ]
-        },
-        {
-          name: "የቪዛ አገልግሎቶች ዓይነት",
-          items: [
-            "የቱሪስት ቪዛ ማመቻቸት",
-            "የንግድ ቪዛ (Business Visa)",
-            "የግብዣ ደብዳቤ (Invitation Letter) ማመቻቸት",
-            "የቪዛ ቀጠሮ ማስያዝ (Visa Appointment)",
-            "የቪዛ ምክርና ፋይል ማዘጋጀት (Visa Consultation)"
-          ]
+          name: "መካከለኛው ምስራቅ እና አፍሪካ",
+          requirements: [
+            "ህጋዊ ፓስፖርት (ቢያንስ 6 ወር የሚቆይ)",
+            "የፓስፖርት ፎቶ",
+            "የቢጫ ወባ ክትባት ካርድ (ለሚመለከቱ የአፍሪካ ሀገራት)",
+            "የበረራ ቅድሚያ ቦታ ማስያዝ",
+            "የሆቴል ቦታ ማስያዝ ማረጋገጫ"
+          ],
+          items: ["ሳውዲ አረቢያ", "ኳታር", "ኦማን", "ኬንያ", "ታንዛኒያ", "ዩጋንዳ", "ሩዋንዳ", "ዛምቢያ"]
         }
       ],
-      inquiry: "ሰላም ወርቅ ዳን! ስለ ዓለም አቀፍ የቪዛ አገልግሎቶች መረጃና እገዛ እፈልጋለሁ።"
+      inquiry: "ሰላም ወርቅ ዳን! ስለ ዓለም አቀፍ ቪዛ አገልግሎት እገዛ እፈልጋለሁ።"
     }
   },
+
+  // ── 6. Document & Attestation ─────────────────────────────────────────────
   {
     id: "document_attestation",
     icon: "📄",
     en: {
-      btnTitle: "📄 Document & PCC",
+      btnTitle: "📄 Document & Attestation",
       title: "📄 DOCUMENT & ATTESTATION SERVICES",
-      tagline: "Police Clearance Certificates, Ministry of Foreign Affairs (MOFA), Embassy legalizations and translations.",
+      tagline: "PCC (Telesign & UAE Attestation), Birth Certificate, Education Document, Driving Licence — UAE attestation with full requirements.",
       sections: [
         {
-          name: "Police Clearance Certificate (PCC)",
-          items: [
-            "PCC Application Submission",
-            "PCC Follow-up & Processing",
-            "PCC Official Attestation"
-          ]
+          name: "PCC — Local (Telesign)",
+          requirements: [
+            "Valid ID or passport copy",
+            "Fingerprint record or local reference details"
+          ],
+          terminalSection: true,
+          inquiry: "Hi Work Dan! I need PCC — Local Telesign service."
         },
         {
-          name: "Document Attestation",
-          items: [
-            "MOFA (Ministry of Foreign Affairs) Attestation",
-            "Embassy Attestation & Legalization",
-            "VFS Document Services",
-            "Educational, Marriage, Birth & Commercial Certificate Attestation"
-          ]
+          name: "PCC — International (UAE Attestation)",
+          requirements: [
+            "Police Clearance Certificate (original)",
+            "Passport copy",
+            "💰  Payment Only: 25,000 ETB   |   With Delivery: 32,000 ETB"
+          ],
+          items: ["Payment Only (25,000 ETB)", "With Delivery (32,000 ETB)"]
         },
         {
-          name: "Other Document Services",
-          items: [
-            "Certified Legal Translation (Arabic, English, Amharic, etc.)",
-            "Document Legalization & Notarization",
-            "Telesign Services",
-            "Official Document Verification"
-          ]
+          name: "Birth Certificate — UAE Attestation",
+          requirements: [
+            "Original birth certificate",
+            "Parents' ID or passport copies"
+          ],
+          terminalSection: true,
+          inquiry: "Hi Work Dan! I need Birth Certificate UAE Attestation."
+        },
+        {
+          name: "Education Document — UAE Attestation",
+          requirements: [
+            "Original degree or academic transcript",
+            "University/college verification letter",
+            "Passport copy"
+          ],
+          terminalSection: true,
+          inquiry: "Hi Work Dan! I need Education Document UAE Attestation."
+        },
+        {
+          name: "Driving Licence — UAE Attestation",
+          requirements: [
+            "Original driving licence",
+            "Passport copy",
+            "Certified translation (if applicable)"
+          ],
+          terminalSection: true,
+          inquiry: "Hi Work Dan! I need Driving Licence UAE Attestation."
         }
       ],
-      inquiry: "Hi Work Dan! I need assistance with Document Attestation / Police Clearance Certificate (PCC)."
+      inquiry: "Hi Work Dan! I need assistance with Document Attestation / PCC."
     },
     am: {
-      btnTitle: "📄 ሰነዶችና PCC",
-      title: "📄 የሰነዶች ማረጋገጫና አቴስቴሽን (MOFA & PCC)",
-      tagline: "የፖሊስ ነጻነት ማስረጃ (PCC)፣ የውጭ ጉዳይ ሚኒስቴር (MOFA) እና የኤምባሲ ህጋዊ ማረጋገጫዎች።",
+      btnTitle: "📄 ሰነዶች እና PCC",
+      title: "📄 የሰነዶች ማረጋገጫ (Attestation) እና PCC",
+      tagline: "PCC (Telesign ና UAE Attestation)፣ የልደት ማስረጃ፣ የትምህርት ሰነድ፣ ሹፌር ፍቃድ — ሙሉ ሰነዶች ዝርዝር ጨምሮ።",
       sections: [
         {
-          name: "የፖሊስ ክሊራንስ ሰነድ (Police Clearance Certificate)",
-          items: [
-            "የ PCC ማመልከቻ ማቅረብ",
-            "የ PCC ሂደት ክትትልና ማጠናቀቅ",
-            "የ PCC ህጋዊ ማረጋገጫ (Attestation)"
-          ]
+          name: "PCC — ሀገር ውስጥ (Telesign)",
+          requirements: [
+            "ህጋዊ መታወቂያ ወይም ፓስፖርት ቅጂ",
+            "የጣት አሻራ ወይም ሀገር ውስጥ ማጣቀሻ ዝርዝሮች"
+          ],
+          terminalSection: true,
+          inquiry: "ሰላም ወርቅ ዳን! PCC — ሀገር ውስጥ Telesign አገልግሎት እፈልጋለሁ።"
         },
         {
-          name: "የሰነዶች ህጋዊ ማረጋገጫ (Attestation)",
-          items: [
-            "የውጭ ጉዳይ ሚኒስቴር ማረጋገጫ (MOFA)",
-            "የኤምባሲ ህጋዊ ማረጋገጫ (Embassy Attestation)",
-            "የ VFS አገልግሎቶች",
-            "የትምህርት ማስረጃዎች፣ የጋብቻ፣ የልደት እና የንግድ ሰነዶች ማረጋገጫ"
-          ]
+          name: "PCC — ዓለም አቀፍ (UAE Attestation)",
+          requirements: [
+            "ዋናው የፖሊስ ክሊራንስ ሰርተፊኬት",
+            "የፓስፖርት ቅጂ",
+            "💰  ክፍያ ብቻ፡ 25,000 ብር   |   ከደሊቨሪ ጋር፡ 32,000 ብር"
+          ],
+          items: ["ክፍያ ብቻ (25,000 ብር)", "ከደሊቨሪ ጋር (32,000 ብር)"]
         },
         {
-          name: "ተጨማሪ የሰነድ አገልግሎቶች",
-          items: [
-            "ህጋዊ የቋንቋ ትርጉም (አማርኛ፣ እንግሊዝኛ፣ አረብኛ ወዘተ)",
-            "ህጋዊ ማረጋገጫና ኖተራይዜሽን (Legalization)",
-            "ቴሌሳይን (Telesign)",
-            "የሰነዶች ትክክለኛነት ማረጋገጥ (Document Verification)"
-          ]
+          name: "የልደት ማስረጃ — UAE Attestation",
+          requirements: [
+            "ዋናው የልደት ማስረጃ",
+            "የወላጆች መታወቂያ ወይም ፓስፖርት ቅጂ"
+          ],
+          terminalSection: true,
+          inquiry: "ሰላም ወርቅ ዳን! የልደት ማስረጃ UAE Attestation አገልግሎት እፈልጋለሁ።"
+        },
+        {
+          name: "የትምህርት ሰነድ — UAE Attestation",
+          requirements: [
+            "ዋናው ዲግሪ ወይም የሴርተፊኬት ሰርተፊኬት",
+            "ዩኒቨርሲቲ / ኮሌጅ ማስረጃ ደብዳቤ",
+            "የፓስፖርት ቅጂ"
+          ],
+          terminalSection: true,
+          inquiry: "ሰላም ወርቅ ዳን! የትምህርት ሰነድ UAE Attestation አገልግሎት እፈልጋለሁ።"
+        },
+        {
+          name: "ሹፌር ፍቃድ — UAE Attestation",
+          requirements: [
+            "ዋናው ሹፌር ፍቃድ",
+            "የፓስፖርት ቅጂ",
+            "የቋንቋ ትርጉም (አስፈላጊ ከሆነ)"
+          ],
+          terminalSection: true,
+          inquiry: "ሰላም ወርቅ ዳን! ሹፌር ፍቃድ UAE Attestation አገልግሎት እፈልጋለሁ።"
         }
       ],
-      inquiry: "ሰላም ወርቅ ዳን! ስለ ሰነዶች ማረጋገጫ (MOFA) ወይም የፖሊስ ክሊራንስ (PCC) አገልግሎት ማወቅ እፈልጋለሁ።"
+      inquiry: "ሰላም ወርቅ ዳን! ስለ ሰነዶች ማረጋገጫ (MOFA) ወይም PCC አገልግሎት ጥያቄ ነበረኝ።"
     }
   },
+
+  // ── 7. Business & Consultancy ─────────────────────────────────────────────
   {
     id: "business_consultancy",
     icon: "💼",
     en: {
-      btnTitle: "💼 Business Setup",
-      title: "💼 UAE BUSINESS & CONSULTANCY (Workdane)",
-      tagline: "Company formation, trade licenses, investor visas, corporate bank accounts, and PRO services in the UAE.",
+      btnTitle: "💼 Business & Consultancy",
+      title: "💼 BUSINESS & CONSULTANCY (Workdane Trading LLC)",
+      tagline: "UAE company setup — Free Zone (all 7 Emirates) & Mainland, Tax Filing, Bank Account and PRO services.",
       sections: [
         {
-          name: "UAE Business Setup",
+          name: "Free Zone Setup — Dubai",
+          requirements: ["Passport copy", "Passport-size photo", "Bank statement", "Police Clearance Certificate (PCC)"],
           items: [
-            "Mainland Company Formation (100% foreign ownership)",
-            "Free Zone Company Setup (Dubai & Sharjah Free Zones)",
-            "Commercial, Professional & Industrial Trade Licenses",
-            "Trade Name Reservation & Initial Approvals"
+            "Partner — DMCC", "Partner — JAFZA", "Partner — DIFC", "Partner — DIC", "Partner — DMC",
+            "100% Shareholder — DMCC", "100% Shareholder — JAFZA", "100% Shareholder — DIFC",
+            "100% Shareholder — DIC", "100% Shareholder — DMC"
           ]
         },
         {
-          name: "Corporate Support Services",
+          name: "Free Zone Setup — Abu Dhabi",
+          requirements: ["Passport copy", "Passport-size photo", "Bank statement", "Police Clearance Certificate (PCC)"],
           items: [
-            "Corporate Tax Registration & Compliance",
-            "VAT Registration & Return Filing",
-            "Corporate & Personal Bank Account Opening",
-            "PRO Services & Government Liaison",
-            "Annual Company License Renewal"
+            "Partner — ADGM", "Partner — KEZAD", "Partner — Masdar City", "Partner — twofour54",
+            "100% Shareholder — ADGM", "100% Shareholder — KEZAD",
+            "100% Shareholder — Masdar City", "100% Shareholder — twofour54"
           ]
         },
         {
-          name: "Consultancy & Advisory",
+          name: "Free Zone Setup — Sharjah",
+          requirements: ["Passport copy", "Passport-size photo", "Bank statement", "Police Clearance Certificate (PCC)"],
           items: [
-            "Comprehensive UAE Business Consultation",
-            "Travel & Tourism Agency Setup Consultancy",
-            "UAE Investment & Investor Visa Advisory"
+            "Partner — SAIF Zone", "Partner — Hamriyah Free Zone", "Partner — SPC",
+            "100% Shareholder — SAIF Zone", "100% Shareholder — Hamriyah Free Zone", "100% Shareholder — SPC"
           ]
+        },
+        {
+          name: "Free Zone Setup — Ras Al Khaimah",
+          requirements: ["Passport copy", "Passport-size photo", "Bank statement", "Police Clearance Certificate (PCC)"],
+          items: ["Partner — RAKEZ", "100% Shareholder — RAKEZ"]
+        },
+        {
+          name: "Free Zone Setup — Ajman",
+          requirements: ["Passport copy", "Passport-size photo", "Bank statement", "Police Clearance Certificate (PCC)"],
+          items: ["Partner — Ajman Free Zone", "100% Shareholder — Ajman Free Zone"]
+        },
+        {
+          name: "Free Zone Setup — Fujairah",
+          requirements: ["Passport copy", "Passport-size photo", "Bank statement", "Police Clearance Certificate (PCC)"],
+          items: ["Partner — Fujairah Free Zone", "100% Shareholder — Fujairah Free Zone"]
+        },
+        {
+          name: "Free Zone Setup — Umm Al Quwain",
+          requirements: ["Passport copy", "Passport-size photo", "Bank statement", "Police Clearance Certificate (PCC)"],
+          items: ["Partner — UAQ FTZ", "100% Shareholder — UAQ FTZ"]
+        },
+        {
+          name: "Mainland Setup — Partner",
+          requirements: ["Passport copy", "Passport-size photo", "Bank statement", "Police Clearance Certificate (PCC)"],
+          items: ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah", "Fujairah", "Umm Al Quwain"]
+        },
+        {
+          name: "Mainland Setup — 100% Shareholder",
+          requirements: ["Passport copy", "Passport-size photo", "Bank statement", "Police Clearance Certificate (PCC)"],
+          items: ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah", "Fujairah", "Umm Al Quwain"]
+        },
+        {
+          name: "Tax Filing",
+          items: [
+            {
+              label: "Corporate Tax Registration",
+              requirements: [
+                "Trade license",
+                "Memorandum of Association (MOA)",
+                "Financial statements",
+                "Owner passport / Emirates ID"
+              ]
+            },
+            {
+              label: "Corporate Tax Return",
+              requirements: [
+                "Audited financial statements",
+                "Trial balance",
+                "Tax Registration Number (TRN)"
+              ]
+            },
+            {
+              label: "VAT Report",
+              requirements: [
+                "Sales / purchase ledgers",
+                "Invoices",
+                "Customs documents",
+                "Bank statements"
+              ]
+            }
+          ]
+        },
+        {
+          name: "Bank Account",
+          requirements: [
+            "Company trade license",
+            "Corporate profile",
+            "Shareholders' passports & CVs",
+            "Recent bank statements (6 months)"
+          ],
+          terminalSection: true,
+          inquiry: "Hi Workdane! I need assistance opening a UAE Corporate Bank Account."
+        },
+        {
+          name: "PRO Service",
+          requirements: [
+            "Company trade license copy",
+            "Establishment card",
+            "Employee passport copies / visa pages"
+          ],
+          terminalSection: true,
+          inquiry: "Hi Workdane! I need PRO Services for my UAE company."
         }
       ],
-      inquiry: "Hi Workdane! I am looking for UAE Business Setup / Trade License / Investor Visa consultation."
+      inquiry: "Hi Workdane! I am interested in UAE Business Setup / Tax Filing / Bank Account / PRO Services."
     },
     am: {
-      btnTitle: "💼 ቢዝነስ ማቋቋም",
-      title: "💼 የዱባይ ንግድ ፈቃድና ማቋቋሚያ (ወርቅዳኔ ትሬዲንግ)",
-      tagline: "በዱባይና ሻርጃህ የንግድ ፈቃድ ማውጣት፣ የኢንቨስተር ቪዛ፣ የባንክ ሒሳብ መክፈትና የ PRO አገልግሎቶች።",
+      btnTitle: "💼 ቢዝነስ እና ምክር አገልግሎት",
+      title: "💼 የቢዝነስ ማቋቋሚያና ምክር አገልግሎት (ወርቅዳኔ ትሬዲንግ)",
+      tagline: "UAE ድርጅት ማቋቋም — ፍሪ ዞን (7 ኤሚሬቶች) እና ሜይን ላንድ፣ Tax Filing፣ ባንክ አካውንት እና PRO አገልግሎት።",
       sections: [
         {
-          name: "በተባበሩት አረብ ኤሚሬቶች ድርጅት ማቋቋም",
+          name: "ፍሪ ዞን — ዱባይ",
+          requirements: ["የፓስፖርት ቅጂ", "የፓስፖርት ፎቶ", "Bank Statement", "PCC (የፖሊስ ክሊራንስ ሰርተፊኬት)"],
           items: [
-            "በዋናው ከተማ ድርጅት መክፈት (Mainland - 100% የራስዎ ባለቤትነት)",
-            "በነጻ የንግድ ቀጠና ድርጅት መክፈት (Free Zone - Dubai & Sharjah)",
-            "የንግድ፣ የሙያ እና የኢንዱስትሪ ፈቃዶች (Trade License)",
-            "የንግድ ስም ማስያዝ እና የመጀመሪያ ፈቃድ ማግኘት"
+            "አጋርነት — DMCC", "አጋርነት — JAFZA", "አጋርነት — DIFC", "አጋርነት — DIC", "አጋርነት — DMC",
+            "100% ባለቤት — DMCC", "100% ባለቤት — JAFZA", "100% ባለቤት — DIFC",
+            "100% ባለቤት — DIC", "100% ባለቤት — DMC"
           ]
         },
         {
-          name: "የኮርፖሬት ድጋፍ አገልግሎቶች",
+          name: "ፍሪ ዞን — አቡ ዳቢ",
+          requirements: ["የፓስፖርት ቅጂ", "የፓስፖርት ፎቶ", "Bank Statement", "PCC (የፖሊስ ክሊራንስ ሰርተፊኬት)"],
           items: [
-            "የኮርፖሬት ታክስ ምዝገባና ህጋዊ ክትትል",
-            "የተጨማሪ እሴት ታክስ (VAT) ምዝገባ",
-            "የድርጅት እና የግል የባንክ ሒሳብ መክፈት",
-            "የመንግስት ጉዳይ አስፈጻሚ አገልግሎት (PRO Services)",
-            "ዓመታዊ የንግድ ፈቃድ እድሳት"
+            "አጋርነት — ADGM", "አጋርነት — KEZAD", "አጋርነት — Masdar City", "አጋርነት — twofour54",
+            "100% ባለቤት — ADGM", "100% ባለቤት — KEZAD",
+            "100% ባለቤት — Masdar City", "100% ባለቤት — twofour54"
           ]
         },
         {
-          name: "የማማከር አገልግሎቶች",
+          name: "ፍሪ ዞን — ሻርጃህ",
+          requirements: ["የፓስፖርት ቅጂ", "የፓስፖርት ፎቶ", "Bank Statement", "PCC (የፖሊስ ክሊራንስ ሰርተፊኬት)"],
           items: [
-            "የተሟላ የንግድ አጀማመር ምክር (Business Consultation)",
-            "የጉዞና ቱሪዝም ኤጀንሲ ማቋቋም ምክር",
-            "የ UAE ኢንቨስትመንትና ኢንቨስተር ቪዛ ማማከር"
+            "አጋርነት — SAIF Zone", "አጋርነት — Hamriyah Free Zone", "አጋርነት — SPC",
+            "100% ባለቤት — SAIF Zone", "100% ባለቤት — Hamriyah Free Zone", "100% ባለቤት — SPC"
           ]
+        },
+        {
+          name: "ፍሪ ዞን — ሮስ አልካይማ",
+          requirements: ["የፓስፖርት ቅጂ", "የፓስፖርት ፎቶ", "Bank Statement", "PCC (የፖሊስ ክሊራንስ ሰርተፊኬት)"],
+          items: ["አጋርነት — RAKEZ", "100% ባለቤት — RAKEZ"]
+        },
+        {
+          name: "ፍሪ ዞን — አጅማን",
+          requirements: ["የፓስፖርት ቅጂ", "የፓስፖርት ፎቶ", "Bank Statement", "PCC (የፖሊስ ክሊራንስ ሰርተፊኬት)"],
+          items: ["አጋርነት — Ajman Free Zone", "100% ባለቤት — Ajman Free Zone"]
+        },
+        {
+          name: "ፍሪ ዞን — ፉጄይራ",
+          requirements: ["የፓስፖርት ቅጂ", "የፓስፖርት ፎቶ", "Bank Statement", "PCC (የፖሊስ ክሊራንስ ሰርተፊኬት)"],
+          items: ["አጋርነት — Fujairah Free Zone", "100% ባለቤት — Fujairah Free Zone"]
+        },
+        {
+          name: "ፍሪ ዞን — ኡም አልቅዋን",
+          requirements: ["የፓስፖርት ቅጂ", "የፓስፖርት ፎቶ", "Bank Statement", "PCC (የፖሊስ ክሊራንስ ሰርተፊኬት)"],
+          items: ["አጋርነት — UAQ FTZ", "100% ባለቤት — UAQ FTZ"]
+        },
+        {
+          name: "ሜይን ላንድ — አጋርነት",
+          requirements: ["የፓስፖርት ቅጂ", "የፓስፖርት ፎቶ", "Bank Statement", "PCC (የፖሊስ ክሊራንስ ሰርተፊኬት)"],
+          items: ["ዱባይ", "አቡ ዳቢ", "ሻርጃህ", "አጅማን", "ሮስ አልካይማ", "ፉጄይራ", "ኡም አልቅዋን"]
+        },
+        {
+          name: "ሜይን ላንድ — 100% ባለቤት",
+          requirements: ["የፓስፖርት ቅጂ", "የፓስፖርት ፎቶ", "Bank Statement", "PCC (የፖሊስ ክሊራንስ ሰርተፊኬት)"],
+          items: ["ዱባይ", "አቡ ዳቢ", "ሻርጃህ", "አጅማን", "ሮስ አልካይማ", "ፉጄይራ", "ኡም አልቅዋን"]
+        },
+        {
+          name: "Tax Filing",
+          items: [
+            {
+              label: "Corporate Tax Registration",
+              requirements: [
+                "Trade License",
+                "Memorandum of Association (MOA)",
+                "Financial Statements",
+                "የባለቤት ፓስፖርት / Emirates ID"
+              ]
+            },
+            {
+              label: "Corporate Tax Return",
+              requirements: [
+                "Audited Financial Statements",
+                "Trial Balance",
+                "Tax Registration Number (TRN)"
+              ]
+            },
+            {
+              label: "VAT Report",
+              requirements: [
+                "የሽያጭ / ግዢ Ledgers",
+                "Invoices",
+                "Customs Documents",
+                "Bank Statements"
+              ]
+            }
+          ]
+        },
+        {
+          name: "ባንክ አካውንት (Bank Account)",
+          requirements: [
+            "Company Trade License",
+            "Corporate Profile",
+            "የባለቤቶች ፓስፖርት እና CV",
+            "ቅርብ ጊዜ Bank Statements (6 ወር)"
+          ],
+          terminalSection: true,
+          inquiry: "ሰላም ወርቅዳኔ! UAE Corporate Bank Account ለመክፈት እገዛ እፈልጋለሁ።"
+        },
+        {
+          name: "PRO አገልግሎት",
+          requirements: [
+            "Company Trade License ቅጂ",
+            "Establishment Card",
+            "Employee Passport ቅጂ / Visa Pages"
+          ],
+          terminalSection: true,
+          inquiry: "ሰላም ወርቅዳኔ! የ PRO አገልግሎት ለድርጅቴ እፈልጋለሁ።"
         }
       ],
-      inquiry: "ሰላም ወርቅዳኔ! በዱባይ የንግድ ፈቃድ ማውጣት / ኢንቨስተር ቪዛ / የባንክ አካውንት መክፈት እፈልጋለሁ።"
+      inquiry: "ሰላም ወርቅዳኔ! ስለ UAE ቢዝነስ / Tax Filing / ባንክ አካውንት / PRO አገልግሎት ጥያቄ ነበረኝ።"
     }
   },
+
+  // ── 8. Transportation ─────────────────────────────────────────────────────
   {
     id: "transport_cars",
     icon: "🚗",
     en: {
       btnTitle: "🚗 Transportation",
-      title: "🚗 TRANSPORTATION & CAR SERVICES",
-      tagline: "Airport transfers, luxury chauffeured rides, and city-wide transportation across the UAE.",
+      title: "🚗 TRANSPORTATION SERVICES",
+      tagline: "Airport pick-up & drop-off, VIP transfers, Luxury Car, Chauffeur, Yacht, Helicopter and Supercar.",
       sections: [
         {
           name: "Transfer Services",
-          items: [
-            "Airport Pick-up & Meet-and-Greet",
-            "Hotel & Airport Drop-off",
-            "Inter-emirate VIP Transfers"
-          ]
+          items: ["Pick-up", "Drop-off", "VIP Transfer"]
         },
         {
-          name: "Luxury Transportation & Fleet",
-          items: [
-            "Luxury & Exotic Car Rental",
-            "Professional Chauffeur Services",
-            "VIP Private Transport & Group Vans"
-          ]
+          name: "Luxury Services",
+          items: ["Luxury Car", "Chauffeur", "Yacht Tour", "Helicopter", "Supercar"]
         }
       ],
-      inquiry: "Hi Work Dan! I would like to book or inquire about Transportation / Car Rental / Airport Transfers."
+      inquiry: "Hi Work Dan! I would like to book Transportation / Airport Transfer / Luxury Service."
     },
     am: {
       btnTitle: "🚗 ትራንስፖርት",
-      title: "🚗 የትራንስፖርትና የመኪና አገልግሎቶች",
-      tagline: "ከአየር ማረፊያ መቀበልና ማድረስ፣ የቅንጦት መኪኖች ከአሽከርካሪ ጋር በኤሚሬቶች ውስጥ።",
+      title: "🚗 የትራንስፖርት አገልግሎቶች",
+      tagline: "ከ/ወደ አየር ማረፊያ ትራንስፖርት፣ VIP ማመላለሻ፣ Luxury Car፣ Chauffeur፣ Yacht፣ Helicopter እና Supercar።",
       sections: [
         {
-          name: "የማመላለስ አገልግሎቶች (Transfers)",
-          items: [
-            "ከአየር ማረፊያ መቀበልና አቀባበል (Pick-up & Meet & Greet)",
-            "ወደ አየር ማረፊያ ማድረስ (Drop-off)",
-            "በኤሚሬቶች መካከል የቪአይፒ ማመላለሻ (VIP Transfers)"
-          ]
+          name: "የማመላለሻ አገልግሎቶች",
+          items: ["ከአየር ማረፊያ መቀበል (Pick-up)", "ወደ አየር ማረፊያ ማድረስ (Drop-off)", "VIP ማመላለሻ"]
         },
         {
-          name: "የቅንጦት ትራንስፖርት እና መኪኖች",
-          items: [
-            "ዘመናዊ የቅንጦት መኪኖች ኪራይ (Luxury Car)",
-            "ልምድ ካላቸው አሽከርካሪዎች ጋር (Chauffeur Service)",
-            "የቪአይፒ እና የቤተሰብ መኪኖች ማመቻቸት"
-          ]
+          name: "የቅንጦት አገልግሎቶች",
+          items: ["Luxury Car", "Chauffeur", "Yacht Tour", "Helicopter", "Supercar"]
         }
       ],
-      inquiry: "ሰላም ወርቅ ዳን! የአየር ማረፊያ ትራንስፖርት ወይም የመኪና ኪራይ አገልግሎት እፈልጋለሁ።"
+      inquiry: "ሰላም ወርቅ ዳን! ስለ ትራንስፖርት / VIP ማመላለሻ / ቅንጦት አገልግሎት ጥያቄ ነበረኝ።"
     }
   },
-  {
-    id: "travel_support",
-    icon: "🧳",
-    en: {
-      btnTitle: "🧳 Travel Support",
-      title: "🧳 TRAVEL & AIRPORT SUPPORT",
-      tagline: "Custom itinerary planning, airport assistance, meet & greet, and 24/7 client care.",
-      sections: [
-        {
-          name: "Travel Planning",
-          items: [
-            "Custom Itinerary Design",
-            "Destination Advice & Recommendations",
-            "Curated Hotel & Flight Selection"
-          ]
-        },
-        {
-          name: "Airport Support",
-          items: [
-            "Airport Assistance & Fast-Track Guidance",
-            "Airport Meet & Greet Services",
-            "Flight Transit & Layover Assistance"
-          ]
-        },
-        {
-          name: "Customer Support Desk",
-          items: [
-            "Existing Booking Management & Changes",
-            "Visa Application Status Follow-up",
-            "Ticket Schedule & Routing Follow-up",
-            "Dedicated Complaint & Issue Resolution"
-          ]
-        }
-      ],
-      inquiry: "Hi Work Dan! I need customer support regarding my travel / booking."
-    },
-    am: {
-      btnTitle: "🧳 የጉዞ ድጋፍ",
-      title: "🧳 የጉዞ እና የአየር ማረፊያ ድጋፍ",
-      tagline: "የጉዞ እቅድ ማውጣት፣ የአየር ማረፊያ አቀባበልና እገዛ፣ እንዲሁም የ 24/7 የደንበኞች ድጋፍ።",
-      sections: [
-        {
-          name: "የጉዞ እቅድ ማውጣት (Travel Planning)",
-          items: [
-            "ልዩ የጉዞ መርሃ-ግብር ማዘጋጀት (Custom Itinerary)",
-            "የመዳረሻ ሀገራት ምክርና ጠቃሚ መረጃ",
-            "ምርጥ ሆቴልና በረራ መምረጥ"
-          ]
-        },
-        {
-          name: "የአየር ማረፊያ ድጋፍ (Airport Support)",
-          items: [
-            "የአየር ማረፊያ እገዛና መመሪያ",
-            "አቀባበልና እንክብካቤ (Meet & Greet)",
-            "የትራንዚት እና የቅብብል በረራ እገዛ"
-          ]
-        },
-        {
-          name: "የደንበኞች አገልግሎት ድጋፍ",
-          items: [
-            "ያለፈ ቦታ ማስያዝ ክትትልና ለውጥ",
-            "የቪዛ ሁኔታ ክትትል (Visa Follow-up)",
-            "የትኬት መረጃና ለውጥ ክትትል (Ticket Follow-up)",
-            "ቅሬታዎችንና ችግሮችን በፍጥነት መፍታት"
-          ]
-        }
-      ],
-      inquiry: "ሰላም ወርቅ ዳን! ስለ ጉዞ ድጋፍ / ያለኝ ቦታ ማስያዝ ጥያቄ ነበረኝ።"
-    }
-  },
+
+  // ── 9. B2B / Agency Services ──────────────────────────────────────────────
   {
     id: "b2b_agency",
     icon: "🤝",
     en: {
-      btnTitle: "🤝 B2B Services",
-      title: "🤝 B2B & AGENCY PARTNERSHIPS",
-      tagline: "Sub-agency portals, wholesale net rates, high commission structures, and dedicated agency support.",
+      btnTitle: "🤝 B2B / Agency Services",
+      title: "🤝 B2B / AGENCY SERVICES",
+      tagline: "Partner registration (New Agency, Partner, Agent Account) and B2B portals (UAE Visa Portal, Document Attestation).",
       sections: [
         {
           name: "Agency Registration",
-          items: [
-            "New B2B Agency Onboarding",
-            "Travel Agency Partner Registration",
-            "Agent Portal Account Issuance"
-          ]
+          items: ["New B2B Agency", "Partner Registration", "Agent Account"]
         },
         {
-          name: "B2B Services & Portals",
-          items: [
-            "UAE Visa Portal for Agencies",
-            "Wholesale Airline Ticket Booking",
-            "Global Hotel Booking Engine",
-            "Direct Tours & Excursions Portal",
-            "International Visa Processing Desk"
-          ]
-        },
-        {
-          name: "B2B Support & Benefits",
-          items: [
-            "Exclusive Wholesale Price Lists",
-            "Attractive Commissions & Markups",
-            "Flexible Payment & Settlement Methods",
-            "Fast-Track Refund & Cancellation Handling",
-            "Real-Time Booking Status & Dedicated Account Manager"
-          ]
+          name: "B2B Services",
+          items: ["UAE Visa Portal", "Document Attestation"]
         }
       ],
-      inquiry: "Hi Work Dan! I would like to register as a B2B Travel Agency Partner."
+      inquiry: "Hi Work Dan! I would like to register as a B2B Travel Agency Partner / access B2B Services."
     },
     am: {
-      btnTitle: "🤝 የ B2B አጋርነት",
-      title: "🤝 የ B2B እና ኤጀንሲዎች አጋርነት",
-      tagline: "ለጉዞ ወኪሎች እና ኤጀንሲዎች የቪዛ ፖርታል፣ የጅምላ ዋጋዎች፣ ከፍተኛ ኮሚሽን እና ቀጥተኛ ድጋፍ።",
+      btnTitle: "🤝 B2B / ኤጀንሲ አገልግሎቶች",
+      title: "🤝 B2B / ኤጀንሲ አገልግሎቶች",
+      tagline: "አጋርነት ምዝገባ (አዲስ ኤጀንሲ፣ አጋርነት፣ ኤጀንት አካውንት) እና B2B ፖርታሎች (UAE Visa Portal, Document Attestation)።",
       sections: [
         {
-          name: "የኤጀንሲ ምዝገባ (Registration)",
-          items: [
-            "አዲስ የ B2B ኤጀንሲ ምዝገባ",
-            "የአጋርነት ምዝገባና ስምምነት",
-            "የኤጀንት ፖርታል አካውንት ማግኘት"
-          ]
+          name: "ኤጀንሲ ምዝገባ (Agency Registration)",
+          items: ["አዲስ B2B ኤጀንሲ", "አጋርነት ምዝገባ (Partner Registration)", "ኤጀንት አካውንት (Agent Account)"]
         },
         {
-          name: "የ B2B አገልግሎቶችና ፖርታሎች",
-          items: [
-            "የ UAE ቪዛ ፖርታል ለኤጀንሲዎች",
-            "የበረራ ትኬቶች በጅምላ (Wholesale) ዋጋ",
-            "የዓለም አቀፍ ሆቴሎች ፖርታል",
-            "የቱርና የበረሃ ሳፋሪ የቀጥታ ፖርታል",
-            "ዓለም አቀፍ የቪዛ ማመቻቸት"
-          ]
-        },
-        {
-          name: "የ B2B ድጋፍና ጥቅማጥቅሞች",
-          items: [
-            "የኤጀንሲዎች ልዩ የጅምላ ዋጋ ዝርዝር",
-            "ማራኪ የኮሚሽን ተመንና ትርፍ",
-            "ቀላል የክፍያ አማራጮች",
-            "ፈጣን የተመላሽና የስረዛ አሰራር",
-            "የቀጥታ ስታተስ ክትትልና የግል አካውንት ማኔጀር"
-          ]
+          name: "B2B አገልግሎቶች",
+          items: ["UAE Visa Portal", "Document Attestation"]
         }
       ],
-      inquiry: "ሰላም ወርቅ ዳን! እንደ B2B የጉዞ ወኪል / ኤጀንሲ አጋር መመዝገብ እፈልጋለሁ።"
+      inquiry: "ሰላም ወርቅ ዳን! እንደ B2B ኤጀንሲ አጋር ለመመዝገብ / B2B አገልግሎቶችን ለማግኘት እፈልጋለሁ።"
     }
   },
-  {
-    id: "prices_promotions",
-    icon: "💰",
-    en: {
-      btnTitle: "💰 Prices & Deals",
-      title: "💰 PRICES, PROMOTIONS & DEALS",
-      tagline: "Transparent pricing, holiday package discounts, seasonal flight offers, and B2B agent rates.",
-      sections: [
-        {
-          name: "Promotions & Rate Highlights",
-          items: [
-            "Visa Price List (Updated regular & express processing rates)",
-            "Flight Deals (Seasonal promotional fares & SOTO deals)",
-            "Hotel Deals (Discounted partner rates across Dubai & beyond)",
-            "Tour Deals (Desert Safari from 80 AED, City Tours from 80 AED)",
-            "Holiday Package Deals (All-inclusive combos)",
-            "Special Seasonal Promotions (Holiday & festival specials)",
-            "B2B Wholesale Agent Rates"
-          ]
-        }
-      ],
-      inquiry: "Hi Work Dan! Please send me the latest Price List & Promotional Deals."
-    },
-    am: {
-      btnTitle: "💰 ዋጋና ቅናሾች",
-      title: "💰 ዋጋዎች፣ ልዩ ቅናሾችና ማስተዋወቂያዎች",
-      tagline: "ግልጽ ዋጋዎች፣ የበረራ ቅናሾች፣ የሆቴል እና የቱር ልዩ ፓኬጆች እንዲሁም የኤጀንሲ ዋጋዎች።",
-      sections: [
-        {
-          name: "ወቅታዊ ዋጋዎችና ቅናሾች",
-          items: [
-            "የቪዛ ዋጋ ዝርዝር (መደበኛና አስቸኳይ የቪዛ ዋጋዎች)",
-            "የበረራ ትኬት ቅናሾች (ወቅታዊ የበረራና የ SOTO ቅናሾች)",
-            "የሆቴል ቅናሾች (በዱባይና በዓለም አቀፍ ደረጃ)",
-            "የቱር ቅናሾች (የበረሃ ሳፋሪ ከ 80 AED፣ ከተማ ጉብኝት ከ 80 AED ጀምሮ)",
-            "የበዓል ሙሉ የጉዞ ፓኬጆች (All-in-One)",
-            "ወቅታዊ ልዩ ማስተዋወቂያዎች",
-            "የኤጀንሲዎች የጅምላ (B2B) ዋጋዎች"
-          ]
-        }
-      ],
-      inquiry: "ሰላም ወርቅ ዳን! የወቅቱን የዋጋ ዝርዝርና ልዩ ቅናሾችን ማወቅ እፈልጋለሁ።"
-    }
-  },
+
+  // ── 10. Contact & Info ────────────────────────────────────────────────────
   {
     id: "company_contact",
     icon: "📞",
     en: {
-      btnTitle: "📍 Office Contacts",
-      title: "📞 CONTACT & COMPANY INFORMATION",
-      tagline: "Licensed travel agency & business consultancy in Ethiopia (Addis Ababa) and UAE (Dubai & Sharjah).",
+      btnTitle: "📞 Contact & Info",
+      title: "📞 CONTACT & INFO",
+      tagline: "Company overview, office locations, WhatsApp & Telegram support links, and business hours.",
       sections: [
         {
-          name: "About Work Dan Tour & Travel | Workdane Trading LLC",
-          items: [
-            "Headquartered in Addis Ababa with full branch operations in Dubai and Sharjah",
-            "Specialized in Tourism, Ticketing, Visas, and UAE Corporate Setup",
-            "24/7 Dedicated Multilingual Customer Service"
-          ]
-        },
-        {
-          name: "Office Locations",
-          items: [
-            "🇪🇹 Addis Ababa: Megenagna Wach Building, 2nd Floor, Office B.06",
-            "🇦🇪 Dubai: Deira Alrigga Business Center, 3rd Floor",
-            "🇦🇪 Sharjah: Sharjah Business Center, Ground Floor"
-          ]
-        },
-        {
-          name: "Contact Channels",
-          items: [
-            "📞 Ethiopia: +251 911 62 50 35 / +251 906 70 00 07 / +251 906 66 55 77 / +251 906 66 00 77",
-            "📞 UAE: +971 509 064 877 / +971 544 855 377",
-            "💬 Telegram Sales: @Workdan3 & @YeEl1221",
-            "📧 Email: workdanuae@gmail.com",
-            "🌐 Website: www.workdane.com",
-            "🎵 TikTok: work dan tour & travel"
-          ]
+          name: "Company Information & Support",
+          items: ["About Us", "Office Locations", "WhatsApp Support", "Telegram Support", "Business Hours"]
         }
       ],
-      inquiry: "Hi Work Dan! I would like to contact your office / customer service team."
+      inquiry: "Hi Work Dan! I would like to get in touch with your team."
     },
     am: {
-      btnTitle: "📍 አድራሻና ግንኙነት",
-      title: "📞 የድርጅት መረጃ እና አድራሻዎች",
-      tagline: "ህጋዊ የጉዞ ወኪልና የቢዝነስ አማካሪ በአዲስ አበባ (ኢትዮጵያ) እና በዱባይ/ሻርጃህ (ኤሚሬቶች)።",
+      btnTitle: "📞 ግንኙነት እና መረጃ",
+      title: "📞 ግንኙነት እና ስለ ድርጅቱ",
+      tagline: "ስለ ድርጅቱ፣ የቢሮ አድራሻዎች፣ WhatsApp እና Telegram ድጋፍ ሊንኮች፣ እና የሥራ ሰዓቶች።",
       sections: [
         {
-          name: "ስለ ወርቅ ዳን አስጎብኚና የጉዞ ወኪል | ወርቅዳኔ ትሬዲንግ",
-          items: [
-            "ዋና መስሪያ ቤቱ አዲስ አበባ ሆኖ በዱባይ እና በሻርጃህ ሙሉ ቅርንጫፎች ያሉት",
-            "በቱሪዝም፣ በአየር መንገድ ትኬት፣ በቪዛ እና በዱባይ ቢዝነስ ፈቃድ ዘርፍ ግንባር ቀደም",
-            "የ 24/7 ቀጣይነት ያለው የደንበኞች አገልግሎት"
-          ]
-        },
-        {
-          name: "የቢሮ አድራሻዎች",
-          items: [
-            "🇪🇹 አዲስ አበባ፡ መገናኛ ዋች ህንፃ፣ 2ኛ ፎቅ፣ ቢሮ ቁጥር B.06",
-            "🇦🇪 ዱባይ፡ ዴይራ አል ሪጋ ቢዝነስ ሴንተር፣ 3ኛ ፎቅ",
-            "🇦🇪 ሻርጃህ፡ ሻርጃህ ቢዝነስ ሴንተር፣ ምድር ቤት"
-          ]
-        },
-        {
-          name: "የመገናኛ አውታሮች",
-          items: [
-            "📞 ኢትዮጵያ፡ +251 911 62 50 35 / +251 906 70 00 07 / +251 906 66 55 77 / +251 906 66 00 77",
-            "📞 ኤሚሬቶች፡ +971 509 064 877 / +971 544 855 377",
-            "💬 ቴሌግራም የሽያጭ ክፍሎች፡ @Workdan3 እና @YeEl1221",
-            "📧 ኢሜይል፡ workdanuae@gmail.com",
-            "🌐 ድረ-ገጽ፡ www.workdane.com",
-            "🎵 ቲክቶክ፡ work dan tour & travel"
-          ]
+          name: "የድርጅት መረጃ እና ድጋፍ",
+          items: ["ስለ እኛ (About Us)", "የቢሮ አድራሻዎች (Office Locations)", "WhatsApp ድጋፍ", "Telegram ድጋፍ", "የሥራ ሰዓቶች (Business Hours)"]
         }
       ],
-      inquiry: "ሰላም ወርቅ ዳን! ከቢሮአችሁ ወይም ከደንበኞች አገልግሎት ጋር መገናኘት እፈልጋለሁ።"
-    }
-  },
-  {
-    id: "booking_forms",
-    icon: "📋",
-    en: {
-      btnTitle: "📋 Booking Forms",
-      title: "📋 APPLICATION & BOOKING REQUESTS",
-      tagline: "Submit your travel, visa, or setup inquiry in seconds to get an immediate quotation.",
-      sections: [
-        {
-          name: "Quick Booking Options",
-          items: [
-            "🛂 UAE / International Visa Application",
-            "✈️ Flight Ticket Booking Request",
-            "🏨 Hotel Booking Request",
-            "🌍 Tour & Desert Safari Booking Request",
-            "📄 Document Attestation / PCC Request",
-            "🚗 Car Rental & Airport Transfer Request",
-            "💼 UAE Company Setup Inquiry",
-            "🤝 B2B Agency Partnership Application"
-          ]
-        },
-        {
-          name: "How to Book Quickly",
-          items: [
-            "Tap any Sales Specialist button below",
-            "Send your Full Name, Destination, Dates & Service needed",
-            "Our consultant will immediately provide options and handle your booking!"
-          ]
-        }
-      ],
-      inquiry: "Hi Work Dan! I would like to submit a Booking Request."
-    },
-    am: {
-      btnTitle: "📋 ማመልከቻ ቅጾች",
-      title: "📋 የቦታ ማስያዣና ማመልከቻ ቅጾች",
-      tagline: "የቪዛ፣ የበረራ፣ የሆቴል ወይም የቢዝነስ ጥያቄዎን በሰከንዶች ውስጥ ለሽያጭ ክፍላችን ይላኩ።",
-      sections: [
-        {
-          name: "የፈጣን ቦታ ማስያዣ ዓይነቶች",
-          items: [
-            "🛂 የ UAE ወይም ዓለም አቀፍ ቪዛ ማመልከቻ",
-            "✈️ የበረራ ትኬት መቁረጥ ጥያቄ",
-            "🏨 የሆቴል ቦታ ማስያዝ ጥያቄ",
-            "🌍 የቱርና የበረሃ ሳፋሪ ማስያዣ ጥያቄ",
-            "📄 የሰነዶች ማረጋገጫና የ PCC ጥያቄ",
-            "🚗 የመኪና ኪራይና የአየር ማረፊያ ትራንስፖርት ጥያቄ",
-            "💼 የዱባይ ንግድ ፈቃድ ማውጣት ጥያቄ",
-            "🤝 የ B2B ኤጀንሲ አጋርነት ማመልከቻ"
-          ]
-        },
-        {
-          name: "በፍጥነት ቦታ ለማስያዝ",
-          items: [
-            "ከታች ካሉት የሽያጭ ክፍሎች አንዱን ይጫኑ",
-            "ስምዎን፣ የሚፈልጉትን አገልግሎትና የጉዞ ቀን ይላኩ",
-            "ባለሙያዎቻችን ወዲያውኑ አማራጮችን አቅርበው ቦታ ያስይዙልዎታል!"
-          ]
-        }
-      ],
-      inquiry: "ሰላም ወርቅ ዳን! ፈጣን የቦታ ማስያዣ ጥያቄ ማቅረብ እፈልጋለሁ።"
-    }
-  },
-  {
-    id: "terms_policies",
-    icon: "📑",
-    en: {
-      btnTitle: "📑 Terms & Policies",
-      title: "📑 TERMS, POLICIES & REQUIREMENTS",
-      tagline: "Important travel guidelines, visa requirements, cancellation, and refund policies.",
-      sections: [
-        {
-          name: "General Travel & Visa Policies",
-          items: [
-            "Visa Terms: Approval is at the sole discretion of the respective immigration authorities.",
-            "Passport Validity: Passports must have at least 6 months validity from departure date.",
-            "Refund Policy: Refund eligibility depends on airline, hotel, and government regulations.",
-            "Cancellation Policy: Cancellations are subject to supplier fare rules and deadlines.",
-            "Ticket Policy: Names must strictly match passport details; date changes depend on fare class.",
-            "Hotel Policy: Standard check-in is 14:00 - 15:00; early check-in subject to availability.",
-            "Payment Policy: Payments accepted via Bank Transfer (ETB/AED/USD), Cash, or Cards."
-          ]
-        },
-        {
-          name: "Important Notice",
-          items: [
-            "Always verify your visa copy and ticket details immediately upon receipt.",
-            "For assistance or clarifications, our customer support team is available 24/7."
-          ]
-        }
-      ],
-      inquiry: "Hi Work Dan! I have a question regarding Terms, Policies, or Document Requirements."
-    },
-    am: {
-      btnTitle: "📑 ደንቦችና ፖሊሲ",
-      title: "📑 ደንቦች፣ መመሪያዎችና ፖሊሲዎች",
-      tagline: "አስፈላጊ የጉዞ መመሪያዎች፣ የቪዛ መስፈርቶች፣ የስረዛ እና የተመላሽ ገንዘብ ደንቦች።",
-      sections: [
-        {
-          name: "አጠቃላይ የጉዞ እና የቪዛ ፖሊሲዎች",
-          items: [
-            "የቪዛ ደንብ፡ የቪዛ ይሁንታ የሚወሰነው በሚመለከተው ሀገር የኢሚግሬሽን ባለስልጣን ብቻ ነው።",
-            "የፓስፖርት ህጋዊነት፡ ፓስፖርትዎ ቢያንስ ለ 6 ወራት የሚቆይ ሊሆን ይገባል።",
-            "የተመላሽ ገንዘብ ፖሊሲ፡ ተመላሽ ክፍያ የሚፈጸመው በአየር መንገዱ፣ በሆቴሉና በደንቡ መሰረት ነው።",
-            "የስረዛ ፖሊሲ፡ ስረዛዎች በቲኬቱ እና በሆቴሉ ህግ መሰረት ይፈጸማሉ።",
-            "የትኬት ደንብ፡ በትኬቱ ላይ ያለው ስም ከፓስፖርት ጋር አንድ አይነት መሆን አለበት።",
-            "የሆቴል ደንብ፡ መደበኛ መግቢያ ሰዓት (Check-in) 14:00 - 15:00 (ከቀኑ 8:00 - 9:00) ነው።",
-            "የክፍያ ፖሊሲ፡ በባንክ ዝውውር (በብር፣ በድርሀም፣ በዶላር)፣ በጥሬ ገንዘብ ወይም በካርድ መክፈል ይቻላል።"
-          ]
-        },
-        {
-          name: "ጠቃሚ ማሳሰቢያ",
-          items: [
-            "ቪዛዎ ወይም ትኬትዎ ሲደርስዎት ወዲያውኑ የስም እና የቀን ትክክለኛነት ያረጋግጡ።",
-            "ለማንኛውም ማብራሪያ የደንበኞች አገልግሎት ክፍላችን በ 24/7 ዝግጁ ነው።"
-          ]
-        }
-      ],
-      inquiry: "ሰላም ወርቅ ዳን! ስለ ደንቦች፣ ፖሊሲዎች ወይም አስፈላጊ ሰነዶች ማብራሪያ እፈልጋለሁ።"
+      inquiry: "ሰላም ወርቅ ዳን! ከቢሮአችሁ ጋር ለመገናኘት እፈልጋለሁ።"
     }
   }
 ];
